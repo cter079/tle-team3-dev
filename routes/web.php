@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/gappie', function () {
-    return view('gappie');
-  });
-  
+  Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
+
+  Route::get('/gappie', [App\Http\Controllers\AppController::class, 'show'])->name('gappie');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

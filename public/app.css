@@ -120,7 +120,14 @@ body {
     max-width: 70%;
     margin-left: 10px;
 }
-
+.chatButton{
+	width: 100%;
+	border: none;
+	background-color: 	white;
+}
+.chatButton:hover{
+	background-color: rgb(210, 210, 210);
+}
 .form .inbox .msg-header p {
     color: #fff;
     background: #049813;
