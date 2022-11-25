@@ -22,4 +22,7 @@ Auth::routes();
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'show'])->name('gappie');
 
+  Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
