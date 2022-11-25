@@ -38,19 +38,22 @@ class AppController extends Controller
     public function chatView($id)
     {
         $chatName = App::where('id', $id)->get();
-        $chatsReceived = Messages::where([
+        $chats = Messages::where([
             ['account_id', '=', Auth::id()],
-            ['chat_id', '=', $id], ['direction', '=', 'received']
+            ['chat_id', '=', $id],
         ])->get();
-        return view('chat', ['chatContaints' => $chatsReceived], ['chats' => $chatName]);
+        return view('chat', ['chatContaints' => $chats], ['chats' => $chatName]);
     }
 
     public function sendMessage(Request $request)
     {
         $body = json_decode($request->getContent(), true);
         $message = $body["msg"];
+        $chat_id = $body["id"];
+        $name = $body["name"];
+        $account_id = Auth::id();
 
-        // return response()->json(['success' => $body['msg']]);
+
 
         $data = Query::select("response")
             ->where(
@@ -61,11 +64,29 @@ class AppController extends Controller
 
 
         $replay = $data;
+        $this->storeMessage($message, $chat_id, $account_id, $data, $name);
         return json_encode($replay);
-        $this->storeMessage($message);
+        
     }
 
-    public function storeMessage($message){
+    public function storeMessage($message, $chat_id, $account_id, $data, $name){
+        $chatSent = new Messages();
 
+        $chatSent->name = $name;
+        $chatSent ->account_id =$account_id;
+        $chatSent->chat_id = $chat_id;
+        $chatSent->direction = "sent";
+        $chatSent->messages = $message;
+        $chatSent->save();
+
+
+        $chatReceived = new Messages();
+
+        $chatReceived->name = $name;
+        $chatReceived ->account_id =$account_id;
+        $chatReceived->chat_id = $chat_id;
+        $chatReceived->direction = "received";
+        $chatReceived->messages = $data[0]["response"];
+        $chatReceived->save();
     }
 }

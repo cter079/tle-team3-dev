@@ -11,9 +11,9 @@ class Messages extends Model{
     protected $table = 'chat';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'name', 'body', 'status'
+        'name', 'body', 'status', 'account_id', 'chat_id'
     ];
-   public $timestamps = true;
+   public $timestamps = false;
   
   
 }
