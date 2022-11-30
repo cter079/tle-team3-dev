@@ -45,12 +45,7 @@ body {
 	position: relative;
   width: 100%;
 }
-.wrapper {
-    width: 370px;
-    background: #fff;
-    border-radius: 5px;
-    border: 8px solid rgb(0, 0, 0);
-}
+
 .appy-button{
 	position: absolute;
 	top: 50%;
@@ -79,7 +74,7 @@ body {
 }
 
 .wrapper .title {
-    background: #207290;
+    background: #9f5500;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -90,7 +85,7 @@ body {
 .wrapper .form {
     padding: 20px 15px;
     min-height: 400px;
-    max-height: 400px;
+    max-height: 450px;
     overflow-y: auto;
 }
 
@@ -130,7 +125,7 @@ body {
 }
 .form .inbox .msg-header p {
     color: #fff;
-    background: #049813;
+    background: #9f5500;
     border-radius: 10px;
     padding: 8px 10px;
     font-size: 14px;
@@ -171,7 +166,7 @@ body {
 }
 
 .typing-field .input-data input:focus {
-    border-color: #049813;
+    border-color: #9f5500;
 }
 
 .input-data input::placeholder {
@@ -196,7 +191,7 @@ body {
     opacity: 0;
     pointer-events: none;
     border-radius: 3px;
-    background: #049813;
+    background: #9f5500;
     border: 1px solid #007bff;
     transform: translateY(-50%);
     transition: all 0.3s ease;
@@ -208,7 +203,7 @@ body {
 }
 
 .typing-field .input-data button:hover {
-    background: #049813;
+    background: #9f5500;
 }
 @font-face {
 	font-family: "Linux Libertine";
@@ -835,4 +830,359 @@ span.user {
 	padding: 10px 13px;
 	
 	
+  }
+
+  .device {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 349px;
+	height: 689px;
+	border-radius: 33px;
+	position: relative;
+	background-color: #141414;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+		45deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		135deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.17) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		135deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.12) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		45deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent
+	  );
+	background-size: 320px 320px, 320px 320px, 320px 320px, 320px 320px;
+	background-position: left top, right top, left bottom, right bottom;
+	box-shadow: 0 0 1px #000;
+  }
+  
+  .screen {
+	position: absolute;
+	border-radius: 30px;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.12) 0,
+		rgba(0, 0, 0, 0.12) 1px,
+		transparent 1px,
+		transparent 2px,
+		rgba(0, 0, 0, 0.07) 2px,
+		rgba(0, 0, 0, 0.06) 3px,
+		transparent 3px,
+		transparent 4px
+	  ),
+	  linear-gradient(to bottom, #212121, #282828 20px, #171717);
+	background-size: 4px 100%, 100% 100%;
+	background-repeat: repeat-x;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.27);
+	border: 2px #000 solid;
+  }
+  
+  .btn-volume {
+	width: 5px;
+	height: 75px;
+	background-color: #0e0e0e;
+	position: absolute;
+	left: -5px;
+	border-radius: 3px 0 0 3px;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 71px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15),
+	  inset 0 0 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+  }
+  
+  .btn-volume-up {
+	top: 101px;
+  }
+  
+  .btn-volume-down {
+	top: 180px;
+  }
+  
+  .btn-power {
+	width: 4px;
+	height: 68px;
+	background: #000;
+	position: absolute;
+	right: -4px;
+	top: 82px;
+	border-radius: 0 3px 3px 0;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 64px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-power-act {
+	position: absolute;
+	height: 100%;
+	left: -1px;
+	right: -1px;
+	top: 0;
+	cursor: pointer;
+  }
+  
+  .header {
+	top: 0;
+	width: 100%;
+	height: 55px;
+	position: relative;
+  }
+  
+  .detector {
+	position: absolute;
+	height: 11px;
+	background: #0a0a0a;
+	left: 50%;
+	top: 19px;
+	width: 19px;
+	margin-left: -10px;
+	border-radius: 10px;
+  }
+  
+  .camera {
+	position: absolute;
+	height: 9px;
+	left: 50%;
+	top: 20px;
+	margin-left: 20px;
+	width: 9px;
+	border-radius: 10px;
+	background-image: linear-gradient(135deg, black 1px, #787679);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 0 3px #0a0a0a;
+  }
+  
+  .camera:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 4px;
+	height: 3px;
+	background: #32323e;
+	border-radius: 100%;
+	transform: rotate(-45deg);
+  }
+  
+  .camera:after {
+	content: "";
+	display: block;
+	width: 3px;
+	height: 3px;
+	left: 3px;
+	top: 3px;
+	position: absolute;
+	border-radius: 3px;
+	background-image: radial-gradient(50% 50%, #7c7f92, transparent);
+  }
+  
+  .display {
+	width: 320px;
+	height: 568px;
+	background: #000;
+	background-size: auto 100%;
+	position: relative;
+	left: 15px;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.8), inset 0 -1px rgba(255,255,255, .2);
+	background-color: rgb(255, 250, 214);
+  }
+  
+  .footer {
+	position: relative;
+	height: 66px;
+  }
+  
+  .btn-burger {
+	position: absolute;
+	background: #fff;
+	width: 20px;
+	height: 2px;
+	left: 61px;
+	top: 22px;
+	background-image: linear-gradient(to bottom, #5d5d5d, #5a5a5a);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  .btn-burger:before,
+  .btn-burger:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  .btn-burger:before {
+	top: 6px;
+	background-image: linear-gradient(to bottom, #545454, #515151);
+  }
+  
+  .btn-burger:after {
+	top: 12px;
+	background-image: linear-gradient(to bottom, #4b4b4b, #494949);
+  }
+  
+  .btn-home {
+	height: 11px;
+	width: 16px;
+	left: 50%;
+	top: 27px;
+	margin-left: -8px;
+	position: absolute;
+	border-radius: 0 0 1px 1px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d,
+	  inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d;
+  }
+  
+  .btn-home:before,
+  .btn-home:after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 2px;
+	border-top: 2px #5d5d5d solid;
+	border-right: 2px transparent solid;
+	border-bottom: 2px transparent solid;
+	border-left: 2px transparent solid;
+  }
+  
+  .btn-home:before {
+	right: -3px;
+	border-left: 1px transparent solid;
+	transform: rotate(40deg);
+	transform-origin: top right;
+  }
+  
+  .btn-home:after {
+	left: -3px;
+	border-right: 1px transparent solid;
+	transform: rotate(-40deg);
+	transform-origin: top left;
+  }
+  
+  .btn-back {
+	position: absolute;
+	width: 17px;
+	height: 12px;
+	right: 61px;
+	top: 22px;
+	margin-top: 2px;
+	box-shadow: inset -1px -2px 0 #5d5d5d, inset -1px 2px 0 #5d5d5d,
+	  inset -2px 0 0 #5d5d5d;
+  }
+  
+  .btn-back:after {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: -2px;
+	width: 0;
+	height: 0;
+	border-top: 4px transparent solid;
+	border-left: 0;
+	border-bottom: 3px transparent solid;
+	border-right: 8px #5d5d5d solid;
+  }
+  .user-bar {
+	height: 55px;
+	background: #9f5500;
+	color: #fff;
+	padding: 0 8px;
+	font-size: 24px;
+	position: relative;
+	z-index: 1;
+  }
+  
+  .user-bar:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  .user-bar div {
+	float: left;
+	transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+  }
+  
+  .user-bar .actions {
+	float: right;
+	margin: 0 0 0 20px;
+  }
+  
+  .user-bar .actions.more {
+	margin: 0 12px 0 32px;
+  }
+  
+  .user-bar .actions.attachment {
+	margin: 0 0 0 30px;
+  }
+  
+  .user-bar .actions.attachment i {
+	display: block;
+	transform: rotate(-45deg);
+  }
+  
+  .user-bar .avatar {
+	margin: 0 0 0 5px;
+	width: 40px;
+  }
+  
+  .user-bar .avatar img {
+	border-radius: 50%;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	display: block;
+  }
+  
+  .user-bar .name {
+	font-size: 17px;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	letter-spacing: 0.3px;
+	margin: 0 0 0 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 110px;
+  }
+  
+  .user-bar .status {
+	display: block;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 0;
   }

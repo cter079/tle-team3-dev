@@ -14,15 +14,30 @@
 </head>
 
 <body>
-	<div class="phone">
-		<div class="wrapper">
+<div class="wrapper">
+  <div class="device">
+    <div class="screen"></div>
+    <div class="btn-volume btn-volume-up"></div>
+    <div class="btn-volume btn-volume-down"></div>
+    <div class="btn-power">
+      <div class="btn-power-act"></div>
+    </div>
+
+    <div class="header">
+      <div class="detector"></div>
+      <div class="camera"></div>
+    </div>
+
+    <div class="display">
 			<div class="title">
 				gAppy</div>
 			<button onclick="plusDivs(-1)">Notificaties</button>
 			<button onclick="plusDivs(+1)">Chats</button>
 			<div class="mySlides">
 				<div class="form">
-					S
+					@foreach($notifications as $notification)
+					<p>{{$notification->message}}</p>
+					@endforeach
 				</div>
 			</div>
 			<div class="mySlides">
@@ -46,14 +61,20 @@
 
 					</button>
 					<hr>
+					
 					@endforeach
 
 
 				</div>
 			</div>
-			<button class="home-button" style="background-color: black;" onclick="window.location.href='index.php';"></button>
 
 		</div>
+		<div class="footer">
+      <div class="btn-burger"></div>
+      <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
+      <div class="btn-back"></div>
+    </div>
+  </div>
 		<script>
 			var slideIndex = 1;
 			showDivs(slideIndex);

@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/wiki', function () {
+  return view('wiki');
+});
 Auth::routes();
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
 

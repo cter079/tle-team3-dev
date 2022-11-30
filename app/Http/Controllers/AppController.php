@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\App;
 use App\Models\Messages;
 use App\Models\Query;
+use App\Models\Notifications;
+
 
 
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +35,9 @@ class AppController extends Controller
     public function show()
     {
         $chats =  App::all();
-        return view('gappie', ['chats' => $chats]);
+        $notifications =  Notifications::where('account_id', Auth::id())->get();
+
+        return view('gappie', ['chats' => $chats],['notifications' => $notifications]);
     }
     public function chatView($id)
     {
@@ -88,5 +92,13 @@ class AppController extends Controller
         $chatReceived->direction = "received";
         $chatReceived->messages = $data[0]["response"];
         $chatReceived->save();
+        if($data[0]["response"] == "Oké ik zie je straks"){
+            $notification = new Notifications();
+
+        $notification->message = "Pasop! Je bent te aardig. Dit zet je zwak neer in jouw buurt waardoor je sneller overvallen kan worden.";
+        $notification ->account_id =$account_id;
+        $notification->save();
+
+        }
     }
 }

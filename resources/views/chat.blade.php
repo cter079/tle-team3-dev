@@ -20,45 +20,86 @@
 
 <body>
     @foreach($chats as $chatDetails)
-
     <div class="wrapper">
-        <div class="title"> <img class="profile-image" src="{{$chatDetails->image}}" alt="" style="float:left;">
-
-            {{$chatDetails->name}}
-        </div>
-        <div class="form">
-            
-
-                @foreach($chatContaints as $chat)
-                @if($chat->direction == "received")
-                <div class="bot-inbox inbox">
-                <img class="profile-image" src="{{$chatDetails->image}}">
-                <div class="msg-header">
-                    <p>{{$chat-> messages}}</p>
-                </div>
-                </div>
-       
-                 @else
-                 <div class="user-inbox inbox">
-                    <div class="msg-header"><p>{{$chat-> messages}}</p>
-                </div>
-            </div>
-                
-                @endif
-                @endforeach
-                @endforeach
-                </div>
-        <div class="typing-field">
-            <div class="input-data">
-                <input id="data" type="text" placeholder="Type something here.." required>
-                <input id="data2" type="hidden" value="{{$chat->chat_id}}">
-                <input id="data3" type="hidden" value="{{$chat->name}}">
-
-
-                <button onclick="sendMessage()"id="send-btn">Send</button>
-            </div>
-        </div>
+  <div class="device">
+    <div class="screen"></div>
+    <div class="btn-volume btn-volume-up"></div>
+    <div class="btn-volume btn-volume-down"></div>
+    <div class="btn-power">
+      <div class="btn-power-act"></div>
     </div>
+
+    <div class="header">
+      <div class="detector"></div>
+      <div class="camera"></div>
+    </div>
+
+    <div class="display">
+    <div class="user-bar">
+              <div class="back">
+                <i class="zmdi zmdi-arrow-left"></i>
+              </div>
+              <div class="avatar">
+                <img src="{{$chatDetails->image}}" alt="Avatar" height="40px">
+              </div>
+              <div class="name">
+                <span>{{$chatDetails->name}}</span>
+                <span class="status">online</span>
+              </div>
+              <div class="actions more">
+                <i class="fa fa-phone" color="white" style="scale: -1 1;"></i>
+              </div>
+              <div class="actions attachment">
+                <i class="zmdi zmdi-attachment-alt"></i>
+              </div>
+              <div class="actions">
+                <i class="zmdi zmdi-phone"></i>
+              </div>
+</div>
+<div class="form">
+
+
+    @foreach($chatContaints as $chat)
+    @if($chat->direction == "received")
+    
+    <div class="bot-inbox inbox">
+    <img class="profile-image" src="{{$chatDetails->image}}">
+    <div class="msg-header">
+        <p>{{$chat-> messages}}</p>
+    </div>
+    </div>
+
+     @else
+     <div class="user-inbox inbox">
+        <div class="msg-header"><p>{{$chat-> messages}}</p>
+    </div>
+</div>
+    
+    @endif
+    @endforeach
+    @endforeach
+    </div>
+<div class="typing-field">
+<div class="input-data">
+    <input id="data" type="text" placeholder="Type something here.." required>
+    <input id="data2" type="hidden" value="{{$chat->chat_id}}">
+    <input id="data3" type="hidden" value="{{$chat->name}}">
+
+
+    <button onclick="sendMessage()"id="send-btn">Send</button>
+</div>
+</div>
+
+    </div>
+
+    <div class="footer">
+      <div class="btn-burger"></div>
+      <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
+      <div class="btn-back"></div>
+    </div>
+  </div>
+
+        
 </body>
 <script>
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
