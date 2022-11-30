@@ -49,7 +49,6 @@
 			</div>
 			<div class="mainsection">
 				<div class="headerLinks">
-					<span class="user">Not logged in</span> <a href="#">Talk</a> <a href="#">Contributions</a> <a href="#">Create account</a> <a href="#">Log in</a>
 				</div>
 				<div class="tabs clearfix">
 					<div class="tabsLeft">

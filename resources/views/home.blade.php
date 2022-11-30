@@ -29,12 +29,21 @@
     </div>
 
     <div class="display">
-
-        <button class="appy-button"><img class="gAppy" src="https://i.postimg.cc/Bbvv7jf4/gappie.png"/><a href="{{ url('/gappie') }}">gAppie</a></button>
+      <div class="screen2">
+    <div class="icons">
+ 
+               <div class="app" style="cursor:pointer">Bankoe</div>
+               <div class="app" style="cursor:pointer" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
+               <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
+               <div class="app" style="cursor:pointer"></div>
+               
+            </div>
+         
+      </div>
     </div>
     <div class="footer">
       <div class="btn-burger"></div>
-      <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
+      <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home" style="cursor:pointer"></div>
       <div class="btn-back"></div>
     </div>
   </div>

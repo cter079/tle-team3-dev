@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/wiki', function () {
   return view('wiki');
 });
+Route::get('/bankoe', function () {
+  return view('bankoe');
+});
 Auth::routes();
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
 

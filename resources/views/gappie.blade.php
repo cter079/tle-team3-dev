@@ -29,6 +29,7 @@
     </div>
 
     <div class="display">
+		
 			<div class="title">
 				gAppy</div>
 			<button onclick="plusDivs(-1)">Notificaties</button>
@@ -36,7 +37,7 @@
 			<div class="mySlides">
 				<div class="form">
 					@foreach($notifications as $notification)
-					<p>{{$notification->message}}</p>
+					<p onclick="window.location.href=`{{url('/wiki')}}`;" style="cursor:pointer">{{$notification->message}}</p>
 					@endforeach
 				</div>
 			</div>
