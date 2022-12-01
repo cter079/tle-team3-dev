@@ -14,18 +14,41 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 Route::get('/wiki', function () {
   return view('wiki');
 });
-Route::get('/bankoe', function () {
-  return view('bankoe');
-});
+
+
+
+
+Route::get('/deposit', function () { 
+
+  return view('deposit'); 
+
+}); 
+
+
+
+Route::get('/withdraw', function () { 
+
+  return view('withdraw'); 
+
+}); 
+
+
+
+Route::get('/request', function () { 
+
+  return view('request'); 
+
+}); 
 Auth::routes();
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
+  Route::get('/bankoe', [App\Http\Controllers\AppController::class, 'saldoView'])->name('bankoe');
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'show'])->name('gappie');
 

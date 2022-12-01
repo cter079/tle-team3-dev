@@ -30,9 +30,11 @@
 
     <div class="display">
       <div class="screen2">
+      <div id="MyClockDisplay" class="clock" style="background-color: black; color:white; padding-left:5px;" onload="showTime()"></div>
+
     <div class="icons">
  
-               <div class="app" style="cursor:pointer">Bankoe</div>
+               <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
                <div class="app" style="cursor:pointer"></div>
@@ -44,10 +46,33 @@
     <div class="footer">
       <div class="btn-burger"></div>
       <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home" style="cursor:pointer"></div>
-      <div class="btn-back"></div>
+      <div class="btn-back"     onclick="window.history.go(-1); return false;"
+></div>
     </div>
   </div>
 </body>
+<script>
+  function showTime(){
+    let date = new Date();
+    let h = date.getHours(); // 0 - 23
+    let m = date.getMinutes(); // 0 - 59
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    
+    let time = h + ":" + m;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
 
+showTime();
+</script>
 </html>
 @endsection

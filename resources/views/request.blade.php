@@ -44,51 +44,31 @@
 
             <nav> 
 
-                <h1>BANKOE</h1> 
+                <h1>Request</h1> 
 
             </nav> 
 
-            <div class="btn-row"> 
+            <div class="amount2"> 
 
-                <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Deposit</button> 
+                <form> 
 
-                <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a> Withdraw</button> 
+                    <label for="money">€</label> 
 
-                <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Request</button> 
+                    <input type="number" id="money" name="amount"> 
 
-            </div> 
-
-            <div class="welcome"> 
-
-                <h1>Welkom Nasim!</h1> 
+                </form> 
 
             </div> 
 
-            <div class="current-account"> 
+            <div class="submit-btn"> 
 
-                <h1>Saaf:</h1> 
-@foreach($saldo as $saldos)
-                <h2>€{{$saldos->saldo}}</h2> 
-@endforeach
-            </div> 
-
-            <div class="savings-account"> 
-
-                <h1>Opgespaard:</h1> 
-
-                <h2>€ 2145,67</h2> 
+                <a href="bankoe"><button class="submit">Share</button></a> 
 
             </div> 
 
-            <div class="bankoe-img"> 
+            <div class="cancel-btn"> 
 
-                <img src="img/bankoe.png" alt="bankoe logo"> 
-
-            </div> 
-
-            <div class="footer1"> 
-
-                <h1>POWERED BY HCG</h1> 
+                <a href="bankoe"><button class="submit">Cancel</button></a> 
 
             </div> 
 
@@ -106,7 +86,7 @@
 
     </div> 
 
-    </div> 
+</div> 
 
 </div> 
 

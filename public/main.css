@@ -1,0 +1,1127 @@
+body { 
+
+    margin: 0; 
+
+    padding-top: 80px; 
+
+    background-color: white; 
+
+    font-family: "Helvetica", "Arial", sans-serif; 
+
+    display: grid; 
+
+    height: 100%; 
+
+    place-items: center; 
+
+} 
+
+ 
+
+.device { 
+
+    margin-left: 5px; 
+
+    margin-right: 5px; 
+
+    width: 349px; 
+
+    height: 689px; 
+
+    border-radius: 33px; 
+
+    position: relative; 
+
+    background-color: #141414; 
+
+    background-repeat: no-repeat; 
+
+    background-image: linear-gradient( 
+
+        45deg, 
+
+        transparent, 
+
+        transparent 50%, 
+
+        rgba(255, 255, 255, 0.2) 50%, 
+
+        transparent 
+
+    ), 
+
+    linear-gradient( 
+
+        135deg, 
+
+        transparent, 
+
+        transparent 50%, 
+
+        rgba(255, 255, 255, 0.17) 50%, 
+
+        transparent 
+
+    ), 
+
+    linear-gradient( 
+
+        135deg, 
+
+        transparent, 
+
+        transparent 50%, 
+
+        rgba(255, 255, 255, 0.12) 50%, 
+
+        transparent 
+
+    ), 
+
+    linear-gradient( 
+
+        45deg, 
+
+        transparent, 
+
+        transparent 50%, 
+
+        rgba(255, 255, 255, 0.08) 50%, 
+
+        transparent 
+
+    ); 
+
+    background-size: 320px 320px, 320px 320px, 320px 320px, 320px 320px; 
+
+    background-position: left top, right top, left bottom, right bottom; 
+
+    box-shadow: 0 0 1px #000; 
+
+} 
+
+ 
+
+.screen { 
+
+    position: absolute; 
+
+    border-radius: 30px; 
+
+    top: 4px; 
+
+    right: 4px; 
+
+    bottom: 4px; 
+
+    left: 4px; 
+
+    background-color: #2a2a2a; 
+
+    background-size: 4px 100%, 100% 100%; 
+
+    background-repeat: repeat-x; 
+
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.27); 
+
+    border: 2px #000 solid; 
+
+} 
+
+ 
+
+.btn-volume { 
+
+    width: 5px; 
+
+    height: 75px; 
+
+    background-color: #0e0e0e; 
+
+    position: absolute; 
+
+    left: -5px; 
+
+    border-radius: 3px 0 0 3px; 
+
+    background-image: linear-gradient( 
+
+        to bottom, 
+
+        rgba(255, 255, 255, 0.5) 0, 
+
+        rgba(255, 255, 255, 0) 4px, 
+
+        rgba(255, 255, 255, 0) 71px, 
+
+        rgba(255, 255, 255, 0.3) 100% 
+
+    ); 
+
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15), 
+
+    inset 0 0 1px rgba(0, 0, 0, 0.5); 
+
+    cursor: pointer; 
+
+} 
+
+ 
+
+.btn-volume-up { 
+
+    top: 101px; 
+
+} 
+
+ 
+
+.btn-volume-down { 
+
+    top: 180px; 
+
+} 
+
+ 
+
+.btn-power { 
+
+    width: 4px; 
+
+    height: 68px; 
+
+    background: #000; 
+
+    position: absolute; 
+
+    right: -4px; 
+
+    top: 82px; 
+
+    border-radius: 0 3px 3px 0; 
+
+    background-image: linear-gradient( 
+
+        to bottom, 
+
+        rgba(255, 255, 255, 0.5) 0, 
+
+        rgba(255, 255, 255, 0) 4px, 
+
+        rgba(255, 255, 255, 0) 64px, 
+
+        rgba(255, 255, 255, 0.3) 100% 
+
+    ); 
+
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.2); 
+
+} 
+
+ 
+
+.btn-power-act { 
+
+    position: absolute; 
+
+    height: 100%; 
+
+    left: -1px; 
+
+    right: -1px; 
+
+    top: 0; 
+
+    cursor: pointer; 
+
+} 
+
+ 
+
+.header { 
+
+    top: 0; 
+
+    width: 100%; 
+
+    height: 55px; 
+
+    position: relative; 
+
+} 
+
+ 
+
+.detector { 
+
+    position: absolute; 
+
+    height: 11px; 
+
+    background: #0a0a0a; 
+
+    left: 50%; 
+
+    top: 19px; 
+
+    width: 19px; 
+
+    margin-left: -10px; 
+
+    border-radius: 10px; 
+
+} 
+
+ 
+
+.camera { 
+
+    position: absolute; 
+
+    height: 9px; 
+
+    left: 50%; 
+
+    top: 20px; 
+
+    margin-left: 20px; 
+
+    width: 9px; 
+
+    border-radius: 10px; 
+
+    background-image: linear-gradient(135deg, black 1px, #787679); 
+
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 0 3px #0a0a0a; 
+
+} 
+
+ 
+
+.camera:before { 
+
+    content: ""; 
+
+    display: block; 
+
+    position: absolute; 
+
+    left: 3px; 
+
+    top: 3px; 
+
+    width: 4px; 
+
+    height: 3px; 
+
+    background: #32323e; 
+
+    border-radius: 100%; 
+
+    transform: rotate(-45deg); 
+
+} 
+
+ 
+
+.camera:after { 
+
+    content: ""; 
+
+    display: block; 
+
+    width: 3px; 
+
+    height: 3px; 
+
+    left: 3px; 
+
+    top: 3px; 
+
+    position: absolute; 
+
+    border-radius: 3px; 
+
+    background-image: radial-gradient(50% 50%, #7c7f92, transparent); 
+
+} 
+
+ 
+
+.display { 
+
+    width: 320px; 
+
+    height: 568px; 
+
+    position: relative; 
+
+    left: 15px; 
+
+    border-radius: 2px; 
+
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.8), inset 0 -1px rgba(255,255,255, .2); 
+
+} 
+
+ 
+
+.footer { 
+
+    position: relative; 
+
+    height: 66px; 
+
+} 
+
+ 
+
+.btn-burger { 
+
+    position: absolute; 
+
+    background: #fff; 
+
+    width: 20px; 
+
+    height: 2px; 
+
+    left: 61px; 
+
+    top: 22px; 
+
+    background-image: linear-gradient(to bottom, #5d5d5d, #5a5a5a); 
+
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); 
+
+} 
+
+ 
+
+.btn-burger:before, 
+
+.btn-burger:after { 
+
+    content: ""; 
+
+    width: 100%; 
+
+    height: 100%; 
+
+    position: absolute; 
+
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); 
+
+} 
+
+ 
+
+.btn-burger:before { 
+
+    top: 6px; 
+
+    background-image: linear-gradient(to bottom, #545454, #515151); 
+
+} 
+
+ 
+
+.btn-burger:after { 
+
+    top: 12px; 
+
+    background-image: linear-gradient(to bottom, #4b4b4b, #494949); 
+
+} 
+
+ 
+
+.btn-home { 
+
+    height: 11px; 
+
+    width: 16px; 
+
+    left: 50%; 
+
+    top: 27px; 
+
+    margin-left: -8px; 
+
+    position: absolute; 
+
+    border-radius: 0 0 1px 1px; 
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d, 
+
+    inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d; 
+
+} 
+
+ 
+
+.btn-home:before, 
+
+.btn-home:after { 
+
+    content: ""; 
+
+    width: 12px; 
+
+    height: 12px; 
+
+    position: absolute; 
+
+    top: 2px; 
+
+    border-top: 2px #5d5d5d solid; 
+
+    border-right: 2px transparent solid; 
+
+    border-bottom: 2px transparent solid; 
+
+    border-left: 2px transparent solid; 
+
+} 
+
+ 
+
+.btn-home:before { 
+
+    right: -3px; 
+
+    border-left: 1px transparent solid; 
+
+    transform: rotate(40deg); 
+
+    transform-origin: top right; 
+
+} 
+
+ 
+
+.btn-home:after { 
+
+    left: -3px; 
+
+    border-right: 1px transparent solid; 
+
+    transform: rotate(-40deg); 
+
+    transform-origin: top left; 
+
+} 
+
+ 
+
+.btn-back { 
+
+    position: absolute; 
+
+    width: 17px; 
+
+    height: 12px; 
+
+    right: 61px; 
+
+    top: 22px; 
+
+    margin-top: 2px; 
+
+    box-shadow: inset -1px -2px 0 #5d5d5d, inset -1px 2px 0 #5d5d5d, 
+
+    inset -2px 0 0 #5d5d5d; 
+
+} 
+
+ 
+
+.btn-back:after { 
+
+    content: ""; 
+
+    position: absolute; 
+
+    left: -4px; 
+
+    top: -2px; 
+
+    width: 0; 
+
+    height: 0; 
+
+    border-top: 4px transparent solid; 
+
+    border-left: 0; 
+
+    border-bottom: 3px transparent solid; 
+
+    border-right: 8px #5d5d5d solid; 
+
+} 
+
+ 
+
+nav { 
+
+    background-color: #383838; 
+
+    height: 20%; 
+
+    width: 100%; 
+
+    font-size: 18.5px; 
+
+    color: white; 
+
+    text-align: center; 
+
+    padding-top: 20px; 
+
+} 
+
+ 
+
+.btn-row { 
+
+    display: flex; 
+
+    flex-direction: row; 
+
+    justify-content: center; 
+
+ 
+
+} 
+
+ 
+
+.bank-btn{ 
+
+    background-color: #ffa600; 
+
+    width: 55px; 
+
+    height: 55px; 
+
+    border-radius: 22px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+    margin-top: -30px; 
+
+    margin-left: 25px; 
+
+    margin-right: 25px; 
+
+} 
+
+ 
+
+ 
+
+.bank-btn img { 
+
+    height: 74px; 
+
+    margin-left: -7px; 
+
+    position: center; 
+
+    margin-top: -12px; 
+
+} 
+
+ 
+
+button { 
+
+    color: #ffffff; 
+
+    text-align: center; 
+
+    font-size: 9px; 
+
+    font-weight: bold; 
+
+} 
+
+ 
+
+.welcome h1 { 
+
+    text-align: center; 
+
+    color: white; 
+
+    font-size: 15px; 
+
+    margin-top: 40px; 
+
+ 
+
+} 
+
+ 
+
+.current-account { 
+
+    margin-top: 20px; 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 30px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 9px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+} 
+
+ 
+
+.current-account h1 { 
+
+    color: white; 
+
+    text-align: center; 
+
+    font-size: 11px; 
+
+    padding-top: 11px; 
+
+ 
+
+} 
+
+ 
+
+.current-account h2 {
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    margin-top: 10px; 
+
+} 
+
+ 
+
+.savings-account { 
+
+    margin-top: -9px; 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 74px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 9px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+ 
+
+} 
+
+ 
+
+.savings-account h1 { 
+
+    color: white; 
+
+    text-align: center; 
+
+    font-size: 11px; 
+
+    padding-top: 11px; 
+
+ 
+
+} 
+
+ 
+
+.savings-account h2 {
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    margin-top: 10px; 
+
+ 
+
+} 
+
+ 
+
+.bankoe-img img{ 
+
+    height: 150px; 
+
+    position: absolute; 
+
+    margin: auto; 
+
+    left: 0; 
+
+    right: 0; 
+
+    top: 415px; 
+
+    bottom: 0; 
+
+ 
+
+} 
+
+ 
+
+.footer1 { 
+
+    color: white; 
+
+    font-size: 5px; 
+
+    text-align: center; 
+
+    margin-top: 110px; 
+
+ 
+
+} 
+
+ 
+
+/* Withdraw */ 
+
+ 
+
+.savings-account2 { 
+
+    margin-top: 20px; 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 30px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+} 
+
+ 
+
+.savings-account2 h1 { 
+
+    color: white; 
+
+    text-align: center; 
+
+    font-size: 11px; 
+
+    padding-top: 11px; 
+
+} 
+
+ 
+
+.savings-account2 h2 {
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    margin-top: 10px; 
+
+} 
+
+ 
+
+label{ 
+
+    font-size: 32px; 
+
+    font-weight: bold; 
+
+    color: #ffa600; 
+
+    margin-left: 12.5%; 
+
+    margin-right: -30px; 
+
+} 
+
+.amount { 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 30px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+} 
+
+ 
+
+.amount input{ 
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    font-weight: bold; 
+
+    margin-top: 30px; 
+
+    margin-left: 15%; 
+
+    width: 60%; 
+
+    border: none; 
+
+    background: none; 
+
+    border-bottom: solid #ffa600 5px; 
+
+} 
+
+ 
+
+ 
+
+.submit-btn button { 
+
+    background-color: #ffa600; 
+
+    color: white; 
+
+    border: none; 
+
+    border-radius: 8px; 
+
+    text-align: center; 
+
+    text-decoration: none; 
+
+    display: inline-block; 
+
+    font-size: 18.5px; 
+
+    width: 70%; 
+
+    height: 46px; 
+
+    margin-left: 15%; 
+
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6); 
+
+} 
+
+ 
+
+.submit-btn :hover { 
+
+    cursor: pointer; 
+
+} 
+
+ 
+
+.submit-btn { 
+
+    text-decoration: none; 
+
+    color: white; 
+
+} 
+
+ 
+
+.cancel-btn button { 
+
+    background-color: rgb(168, 26, 1); 
+
+    color: white; 
+
+    border: none; 
+
+    border-radius: 8px; 
+
+    text-align: center; 
+
+    text-decoration: none; 
+
+    display: inline-block; 
+
+    font-size: 18.5px; 
+
+    width: 70%; 
+
+    height: 46px; 
+
+    margin-top: 30px; 
+
+    margin-left: 15%; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0, 0.6); 
+
+} 
+
+ 
+
+.cancel-btn :hover { 
+
+    cursor: pointer; 
+
+} 
+
+ 
+
+.cancel-btn { 
+
+    text-decoration: none; 
+
+    color: white; 
+
+} 
+
+/* Deposit */ 
+
+ 
+
+.current-account2 { 
+
+    margin-top: 20px; 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 30px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+} 
+
+ 
+
+.current-account2 h1 { 
+
+    color: white; 
+
+    text-align: center; 
+
+    font-size: 11px; 
+
+    padding-top: 11px; 
+
+} 
+
+ 
+
+.current-account2 h2 {
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    margin-top: 10px; 
+
+} 
+
+ 
+
+/* Request */ 
+
+ 
+
+.amount2 { 
+
+    margin-left: 7.5%; 
+
+    margin-bottom: 30px; 
+
+    margin-top: 20px; 
+
+    background-color: #383838; 
+
+    width: 85%; 
+
+    height: 90px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0); 
+
+} 
+
+ 
+
+.amount2 input { 
+
+    text-align: center; 
+
+    color: #ffa600; 
+
+    font-size: 32px; 
+
+    font-weight: bold; 
+
+    margin-top: 30px; 
+
+    margin-left: 15%; 
+
+    width: 60%; 
+
+    border: none; 
+
+    background: none; 
+
+    border-bottom: solid #ffa600 5px; 
+
+} 

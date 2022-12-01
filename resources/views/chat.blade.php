@@ -95,7 +95,8 @@
     <div class="footer">
       <div class="btn-burger"></div>
       <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
-      <div class="btn-back"></div>
+      <div class="btn-back"     onclick="window.history.go(-1); return false;"
+></div>
     </div>
   </div>
 

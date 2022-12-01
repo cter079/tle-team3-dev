@@ -48,6 +48,13 @@ class AppController extends Controller
         ])->get();
         return view('chat', ['chatContaints' => $chats], ['chats' => $chatName]);
     }
+    public function saldoView()
+    {
+        $saldo = User::select("saldo")
+        ->where('id', Auth::id())->get();
+       
+        return view('bankoe', ['saldo' => $saldo]);
+    }
 
     public function sendMessage(Request $request)
     {
