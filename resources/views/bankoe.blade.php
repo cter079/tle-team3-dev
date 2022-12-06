@@ -1,115 +1,115 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
-<html lang="en"> 
+<html lang="en">
 
-<head> 
+<head>
 
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
 
-    <title>BANKOE Bankieren</title> 
+    <title>BANKOE Bankieren</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css"/> 
+    <link rel="stylesheet" type="text/css" href="main.css" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/bankoe-favicon.png"/> 
+    <link rel="shortcut icon" type="image/x-icon" href="img/bankoe-favicon.png" />
 
-</head> 
+</head>
 
-<body> 
+<body>
 
-<div class="wrapper"> 
+    <div class="wrapper">
 
-    <div class="device"> 
+        <div class="device">
 
-        <div class="screen"></div> 
+            <div class="screen"></div>
 
-        <div class="btn-volume btn-volume-up"></div> 
+            <div class="btn-volume btn-volume-up"></div>
 
-        <div class="btn-volume btn-volume-down"></div> 
+            <div class="btn-volume btn-volume-down"></div>
 
-        <div class="btn-power"> 
+            <div class="btn-power">
 
-            <div class="btn-power-act"></div> 
+                <div class="btn-power-act"></div>
 
-        </div> 
+            </div>
 
-        <div class="header"> 
+            <div class="header">
 
-            <div class="detector"></div> 
+                <div class="detector"></div>
 
-            <div class="camera"></div> 
+                <div class="camera"></div>
 
-        </div> 
+            </div>
 
-        <div class="display"> 
+            <div class="display">
 
-            <nav> 
+                <nav>
 
-                <h1>BANKOE</h1> 
+                    <h1>BANKOE</h1>
 
-            </nav> 
+                </nav>
 
-            <div class="btn-row"> 
+                <div class="btn-row">
 
-                <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Deposit</button> 
+                    <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Deposit</button>
 
-                <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a> Withdraw</button> 
+                    <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a> Withdraw</button>
 
-                <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Request</button> 
+                    <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Request</button>
 
-            </div> 
+                </div>
 
-            <div class="welcome"> 
+                <div class="welcome">
 
-                <h1>Welkom Nasim!</h1> 
+                    <h1>Welkom Nasim!</h1>
 
-            </div> 
+                </div>
 
-            <div class="current-account"> 
+                <div class="current-account">
 
-                <h1>Saaf:</h1> 
-@foreach($saldo as $saldos)
-                <h2>€{{$saldos->saldo}}</h2> 
-@endforeach
-            </div> 
+                    <h1>Saaf:</h1>
+                    @foreach($saldo as $saldos)
+                    <h2>€{{$saldos->saldo}}</h2>
+                    @endforeach
+                </div>
 
-            <div class="savings-account"> 
+                <div class="savings-account">
 
-                <h1>Opgespaard:</h1> 
+                    <h1>Opgespaard:</h1>
 
-                <h2>€ 2145,67</h2> 
+                    <h2>€ 2145,67</h2>
 
-            </div> 
+                </div>
 
-            <div class="bankoe-img"> 
+                <div class="bankoe-img">
 
-                <img src="img/bankoe.png" alt="bankoe logo"> 
+                    <img src="img/bankoe.png" alt="bankoe logo">
 
-            </div> 
+                </div>
 
-            <div class="footer1"> 
+                <div class="footer1">
 
-                <h1>POWERED BY HCG</h1> 
+                    <h1>POWERED BY HCG</h1>
 
-            </div> 
+                </div>
 
-        </div> 
+            </div>
 
-        <div class="footer"> 
+            <div class="footer">
 
-            <div class="btn-burger"></div> 
+                <div class="btn-burger"></div>
 
-            <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div> 
+                <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
 
-            <div class="btn-back"></div> 
+                <div class="btn-back"></div>
 
-        </div> 
+            </div>
 
-    </div> 
+        </div>
 
-    </div> 
+    </div>
 
-</div> 
+    </div>
 
-</body> 
+</body>
 
-</html> 
+</html>

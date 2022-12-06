@@ -37,7 +37,7 @@
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
-               <div class="app" style="cursor:pointer"></div>
+               <div class="app" style="cursor:pointer">Log uit</div>
                
             </div>
          

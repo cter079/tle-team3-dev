@@ -21,30 +21,7 @@
         <![endif]-->
 
 		<div class="wrapAll clearfix">
-			<div class="sidebar">
-				<div class="logo">
-					<a href="/"><img src='img/logo.png' alt="logo"></a>
-				</div>
-				<div class="navigation">
-					<ul>
-						<li><a href="#">Main page</a></li>
-						<li><a href="#">Contents</a></li>
-						<li><a href="#">Featured content</a></li>
-					</ul>
-					<h3>Interaction</h3>
-					<ul>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Portal</a></li>
-					</ul>
-					<h3>Interaction</h3>
-					<ul>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Portal</a></li>
-					</ul>
-				</div>
-
+	
 			
 			</div>
 			<div class="mainsection">
@@ -53,12 +30,11 @@
 				<div class="tabs clearfix">
 					<div class="tabsLeft">
 						<ul>
-							<li><a href="#" class="active">Article</a></li>
-							<li><a href="#">Talk</a></li>						
+							<li><a href="#" class="active">Artikel</a></li>
 						</ul>
 					</div>
 					<div id="simpleSearch">
-						<input type="text" name="searchInput" id="searchInput" placeholder="Search Wikipedia" size="12" />
+						<input type="text" name="searchInput" id="searchInput" placeholder="Zoeken in wikitext" size="12" />
 						<div id="submitSearch"></div>
 					</div>
 					<div class="tabsRight">
@@ -77,13 +53,13 @@
 
 					<div class="articleRight">
 						<div class="articleRightInner">
-							<img src="img/burnerphone.png" alt="pencil" />
+							<img src="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" alt="pencil" />
 						</div>
 						Dit is ons <a href="">logo</a>
 					</div>
-					<p>Lorem ipsum <strong>dolor sit amet</strong>, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-					<p>Eum facete intellegat ei, ut mazim melius usu. Has elit simul primis ne, regione minimum id cum. Sea deleniti dissentiet ea. Illud mollis moderatius ut per, at qui ubique populo. Eum ad cibo legimus, vim ei quidam fastidii.</p>
-					<p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
+					<p>Burnerphone is een serious game waar jij de uitdaging krijgt om op de juiste manier te antwoorden op berichten van jeugdcriminelen.</p>
+					<p>Hierin zijn meerdere keuzes mogelijk. Zo kan jij op een manier antwoorden als hoe jij denkt dat het gepast is of wat ethisch verantwoord is als jij je in zou leven in je personage.</p>
+					<p>Het doel van onze game is simpel: Wij willen professionals die in contact komen met jeugdcriminelen meer inlevingsvermogen geven door deze game voor hen te ontwikkelen.</p>
 					<p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
 					<div class="contentsPanel">
 						<div class="contentsHeader">Contents</div>

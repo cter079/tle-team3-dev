@@ -10,6 +10,8 @@
     <title>{{ config('app.name', 'Burnerphone') }}</title>
 
     <!-- Fonts -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" />
+
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
