@@ -65,11 +65,9 @@
                 </div>
 
                 <div class="current-account">
-
                     <h1>Saaf:</h1>
                     @foreach($saldo as $saldos)
                     <h2>€{{$saldos->saldo}}</h2>
-                    @endforeach
                 </div>
 
                 <div class="savings-account">
@@ -87,8 +85,9 @@
                 </div>
 
                 <div class="footer1">
-
-                    <h1>POWERED BY HCG</h1>
+@if($saldos->saldo <= 0)
+<p>U heeft geen geld meer, u kan daardoor rood gaan staan. Let op! Geld lenen kost geld.</p>
+@endif
 
                 </div>
 
@@ -101,6 +100,7 @@
                 <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
 
                 <div class="btn-back"></div>
+                @endforeach
 
             </div>
 
@@ -111,5 +111,4 @@
     </div>
 
 </body>
-
 </html>

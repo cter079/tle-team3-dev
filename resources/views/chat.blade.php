@@ -159,11 +159,10 @@
         let delay2 = 3000
         localStorage.setItem("option1", body["queries"][0]["response"])
         localStorage.setItem("option2", body["queries"][1]["response"])
+        document.querySelector(".status").textContent = "typing...";
 
         
         setTimeout(function() {
-          document.querySelector(".status").textContent = "typing...";
-          setTimeout(function() {
           let replay = '<div class="bot-inbox inbox"><img class="profile-image" src="{{$chatDetails->image}}"><div class="msg-header"><p>' + body["replay"] + '</p></div></div>';
           document.querySelector(".form").insertAdjacentHTML("beforeend", replay);
          document.querySelector(".form").scrollTop(document.querySelector(".form")[0].scrollHeight);
@@ -177,8 +176,8 @@
             options[i].innerHTML = body["queries"][i]["response"];
             options[i].value = body["queries"][i]["response"];
           }
+     
         }, delay)
-        }, delay2)
 
 
       })

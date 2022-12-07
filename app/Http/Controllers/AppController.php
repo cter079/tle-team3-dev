@@ -9,7 +9,6 @@ use App\Models\Messages;
 use App\Models\Query;
 use App\Models\Notifications;
 use App\Models\Responses;
-use App\Models\storeQuery;
 
 
 
@@ -54,10 +53,18 @@ class AppController extends Controller
     }
     public function saldoView()
     {
+        $account_id = Auth::id();
+
         $saldo = User::select("saldo")
             ->where('id', Auth::id())->get();
-
         return view('bankoe', ['saldo' => $saldo]);
+        if($saldo["saldo"] <= 0){
+
+            $notification = new Notifications();
+            $notification->message = "U heeft geen geld meer, u kan daardoor rood gaan staan. Let op! Geld lenen kost geld.";
+            $notification->account_id = $account_id;
+            $notification->save();
+        }
     }
 
     public function sendMessage(Request $request)
@@ -80,14 +87,14 @@ class AppController extends Controller
 
         $replay = $data[0]["response"];
         $id = $data[0]["id"];
-        $this->storeMessage($message, $chat_id, $account_id, $data, $name);
+        $this->storeMessage($message, $chat_id, $account_id, $data, $name, $replay);
 
         $queries = Responses::select("response")
             ->where('query_id', $id)->get();
         return json_encode(["replay" => $replay, "queries" => $queries]);
     }
 
-    public function storeMessage($message, $chat_id, $account_id, $data, $name)
+    public function storeMessage($message, $chat_id, $account_id, $data, $name, $replay)
     {
         $chatSent = new Messages();
 
@@ -107,7 +114,7 @@ class AppController extends Controller
         $chatReceived->direction = "received";
         $chatReceived->messages = $data[0]["response"];
         $chatReceived->save();
-        if ($data[0]["response"] == "Oké ik zie je straks") {
+        if ($replay == "Oké ik zie je straks") {
             $notification = new Notifications();
 
             $notification->message = "Pasop! Je bent te aardig. Dit zet je zwak neer in jouw buurt waardoor je sneller overvallen kan worden.";
