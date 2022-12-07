@@ -8,6 +8,10 @@ use App\Models\App;
 use App\Models\Messages;
 use App\Models\Query;
 use App\Models\Notifications;
+use App\Models\Responses;
+use App\Models\storeQuery;
+
+
 
 
 
@@ -37,7 +41,7 @@ class AppController extends Controller
         $chats =  App::all();
         $notifications =  Notifications::where('account_id', Auth::id())->get();
 
-        return view('gappie', ['chats' => $chats],['notifications' => $notifications]);
+        return view('gappie', ['chats' => $chats], ['notifications' => $notifications]);
     }
     public function chatView($id)
     {
@@ -51,8 +55,8 @@ class AppController extends Controller
     public function saldoView()
     {
         $saldo = User::select("saldo")
-        ->where('id', Auth::id())->get();
-       
+            ->where('id', Auth::id())->get();
+
         return view('bankoe', ['saldo' => $saldo]);
     }
 
@@ -66,7 +70,7 @@ class AppController extends Controller
 
 
 
-        $data = Query::select("response")
+        $data = Query::select("*")
             ->where(
                 'query',
                 'LIKE',
@@ -74,17 +78,21 @@ class AppController extends Controller
             )->get();
 
 
-        $replay = $data;
+        $replay = $data[0]["response"];
+        $id = $data[0]["id"];
         $this->storeMessage($message, $chat_id, $account_id, $data, $name);
-        return json_encode($replay);
-        
+
+        $queries = Responses::select("response")
+            ->where('query_id', $id)->get();
+        return json_encode(["replay" => $replay, "queries" => $queries]);
     }
 
-    public function storeMessage($message, $chat_id, $account_id, $data, $name){
+    public function storeMessage($message, $chat_id, $account_id, $data, $name)
+    {
         $chatSent = new Messages();
 
         $chatSent->name = $name;
-        $chatSent ->account_id =$account_id;
+        $chatSent->account_id = $account_id;
         $chatSent->chat_id = $chat_id;
         $chatSent->direction = "sent";
         $chatSent->messages = $message;
@@ -94,18 +102,17 @@ class AppController extends Controller
         $chatReceived = new Messages();
 
         $chatReceived->name = $name;
-        $chatReceived ->account_id =$account_id;
+        $chatReceived->account_id = $account_id;
         $chatReceived->chat_id = $chat_id;
         $chatReceived->direction = "received";
         $chatReceived->messages = $data[0]["response"];
         $chatReceived->save();
-        if($data[0]["response"] == "Oké ik zie je straks"){
+        if ($data[0]["response"] == "Oké ik zie je straks") {
             $notification = new Notifications();
 
-        $notification->message = "Pasop! Je bent te aardig. Dit zet je zwak neer in jouw buurt waardoor je sneller overvallen kan worden.";
-        $notification ->account_id =$account_id;
-        $notification->save();
-
+            $notification->message = "Pasop! Je bent te aardig. Dit zet je zwak neer in jouw buurt waardoor je sneller overvallen kan worden.";
+            $notification->account_id = $account_id;
+            $notification->save();
         }
     }
 }

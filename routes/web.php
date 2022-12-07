@@ -51,8 +51,8 @@ Auth::routes();
   Route::get('/bankoe', [App\Http\Controllers\AppController::class, 'saldoView'])->name('bankoe');
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'show'])->name('gappie');
-
   Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');
+
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

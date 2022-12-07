@@ -197,7 +197,6 @@ padding-top: 13px;
     border-radius: 3px;
     font-size: 15px;
     background: #fff;
-    transition: all 0.3s ease;
 }
 
 .typing-field .input-data input:focus {
@@ -214,24 +213,6 @@ padding-top: 13px;
 }
 
 
-.wrapper .typing-field .input-data button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    height: 30px;
-    width: 65px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 3px;
-    background: #219473;
-    border: 1px solid #007bff;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-}
 .icons{
     justify-content: center;
     display: flex;
