@@ -56,15 +56,18 @@ class AppController extends Controller
         $account_id = Auth::id();
 
         $saldo = User::select("saldo")
-            ->where('id', Auth::id())->get();
-        return view('bankoe', ['saldo' => $saldo]);
+            ->where('id', Auth::id())->first();
+            
+            // dd($saldo["saldo"]);
+       
         if($saldo["saldo"] <= 0){
-
             $notification = new Notifications();
             $notification->message = "U heeft geen geld meer, u kan daardoor rood gaan staan. Let op! Geld lenen kost geld.";
             $notification->account_id = $account_id;
             $notification->save();
         }
+        return view('bankoe', ['saldo' => $saldo]);
+
     }
 
     public function sendMessage(Request $request)
