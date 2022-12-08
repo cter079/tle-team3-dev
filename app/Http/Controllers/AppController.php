@@ -35,7 +35,7 @@ class AppController extends Controller
     }
 
 
-    public function show()
+    public function showChats()
     {
         $chats =  App::all();
         $notifications =  Notifications::where('account_id', Auth::id())->get();
@@ -81,11 +81,11 @@ class AppController extends Controller
 
 
         $data = Query::select("*")
-            ->where(
+            ->where([[
                 'query',
                 'LIKE',
-                '%' . $message . '%'
-            )->get();
+                '%' . $message . '%'],['chat_id', $chat_id]
+            ])->get();
 
 
         $replay = $data[0]["response"];

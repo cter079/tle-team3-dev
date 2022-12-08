@@ -125,8 +125,8 @@
 </body>
 <script>
   window.addEventListener("load", () => {
-    let option1 = localStorage.getItem("option1")
-    let option2 = localStorage.getItem("option2")
+    let option1 = localStorage.getItem('{{$chatDetails->name}}')
+    let option2 = localStorage.getItem('{{$chatDetails->name}} 2')
     if (option1 == null && option2 == null) {} else {
       let select = document.querySelector("#data");
       let options = select.getElementsByTagName('option');
@@ -166,8 +166,8 @@
         document.querySelector(".form").insertAdjacentHTML("beforeend", sentmsg);
         let delay = Math.random() * 10000;
         let delay2 = 3000
-        localStorage.setItem("option1", body["queries"][0]["response"])
-        localStorage.setItem("option2", body["queries"][1]["response"])
+        localStorage.setItem("{{$chatDetails->name}}", body["queries"][0]["response"])
+        localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
         document.querySelector(".status").textContent = "typing...";
 
         

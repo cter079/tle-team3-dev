@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,7 @@ Auth::routes();
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
   Route::get('/bankoe', [App\Http\Controllers\AppController::class, 'saldoView'])->name('bankoe');
 
-  Route::get('/gappie', [App\Http\Controllers\AppController::class, 'show'])->name('gappie');
+  Route::get('/gappie', [App\Http\Controllers\AppController::class, 'showChats'])->name('gappie');
   Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');
 
 
