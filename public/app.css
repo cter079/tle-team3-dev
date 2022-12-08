@@ -103,8 +103,8 @@ body {
 
 .wrapper .form {
     padding: 20px 15px;
-    min-height: 430px;
-    max-height: 430px;
+    min-height: 425px;
+    max-height: 425px;
     overflow-y: auto;
 }
 
@@ -179,7 +179,7 @@ padding-top: 13px;
     justify-content: space-evenly;
     background: #efefef;
     border-top: 1px solid #d9d9d9;
-    border-radius: 0 0 5px 5px;
+    border-radius: 40px;
 	
 }
 
@@ -207,8 +207,12 @@ margin-left: 20px;
 	
 }
 .sendButton{
+	width: 45px;
+	height: 45px;
 	border: none;
-	margin-left: 30px;
+	margin-left: 20px;
+	background-color: #219473;
+	border-radius: 50%;
 }
 .selectOption .sendButton:hover{
 	border: none;
@@ -220,6 +224,13 @@ margin-left: 20px;
 
 .input-data input:focus::placeholder {
     color: #bfbfbf;
+}
+.arrow-left{
+	position: relative;
+	left: 6%;
+	transform: rotate(270deg);
+	bottom: 10px;
+
 }
 
 
