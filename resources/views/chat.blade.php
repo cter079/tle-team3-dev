@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="form">
-          
+
 
 
           @foreach($chatContaints as $chat)
@@ -124,6 +124,7 @@
 
 </body>
 <script>
+
   window.addEventListener("load", () => {
     let option1 = localStorage.getItem('{{$chatDetails->name}}')
     let option2 = localStorage.getItem('{{$chatDetails->name}} 2')
@@ -184,7 +185,6 @@
             options[i].innerHTML = body["queries"][i]["response"];
             options[i].value = body["queries"][i]["response"];
           }
-     
         }, delay)
 
 

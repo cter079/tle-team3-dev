@@ -107,6 +107,12 @@ body {
     max-height: 425px;
     overflow-y: auto;
 }
+.form3{
+	padding: 20px 15px;
+	width: 100%;
+    max-height: 565px;
+    overflow-y: auto;
+}
 
 .wrapper .form .inbox {
     width: 100%;
@@ -627,7 +633,6 @@ a:hover {
 div.articleRight {
 	border: 1px solid #c8ccd1;
 	padding: 3px;
-	float: right;
 	background-color: #f8f9fa;
 	font-size: 94%;
 	text-align: center;
@@ -653,7 +658,6 @@ div.articleRightInner {
 	padding: 0.15em 0 0 0.45em;
 }
 .mainsection {
-	margin: 0 0 0 11em;
 }
 .headerLinks {
 	text-align: right;
@@ -886,7 +890,6 @@ span.user {
 		padding: 3px 0.5em 10px 0.5em;
 	}
 	.mainsection {
-		margin: 0 0 0 7em;
 	}
 	.contentsPanel {
 		width: auto;

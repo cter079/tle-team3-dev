@@ -19,7 +19,23 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+		<div class="wrapper">
+    <div class="device">
+      <div class="screen"></div>
+      <div class="btn-volume btn-volume-up"></div>
+      <div class="btn-volume btn-volume-down"></div>
+      <div class="btn-power">
+        <div class="btn-power-act"></div>
+      </div>
 
+      <div class="header">
+        <div class="detector"></div>
+        <div class="camera"></div>
+      </div>
+
+      <div class="display">
+      <div id="MyClockDisplay" class="clock" style="background-color: black; color:white; padding-left:5px;" onload="showTime()"></div>
+<div class="form3">
 		<div class="wrapAll clearfix">
 	
 			
@@ -118,8 +134,13 @@
 			
 			</div>		
 		</div>
-		
-		
+</div>
+<div class="footer">
+        <div class="btn-burger"></div>
+        <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
+        <div class="btn-back" onclick="window.history.go(-1); return false;"></div>
+      </div>
+    </div>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="script.js"></script>
