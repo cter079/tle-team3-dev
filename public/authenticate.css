@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+
+.icon{
+    width: 75px;
+    border-radius: 25px;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.screen4 {		
+	background: linear-gradient(90deg, #f88629, #ffc280);		
+	position: relative;	
+	height: 550px;
+	width: 360px;	
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #f88629;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #f88629, #ffc280);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #f88629;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 70px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #f88629;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #f88629;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #f88629;
+	box-shadow: 0px 2px 2px #f88629;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #f88629;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
+.device {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 349px;
+	height: 689px;
+	border-radius: 33px;
+	position: relative;
+	background-color: #141414;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+		45deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		135deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.17) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		135deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.12) 50%,
+		transparent
+	  ),
+	  linear-gradient(
+		45deg,
+		transparent,
+		transparent 50%,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent
+	  );
+	background-size: 320px 320px, 320px 320px, 320px 320px, 320px 320px;
+	background-position: left top, right top, left bottom, right bottom;
+	box-shadow: 0 0 1px #000;
+  }
+  
+  .screen {
+	position: absolute;
+	border-radius: 30px;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.12) 0,
+		rgba(0, 0, 0, 0.12) 1px,
+		transparent 1px,
+		transparent 2px,
+		rgba(0, 0, 0, 0.07) 2px,
+		rgba(0, 0, 0, 0.06) 3px,
+		transparent 3px,
+		transparent 4px
+	  ),
+	  linear-gradient(to bottom, #212121, #282828 20px, #171717);
+	background-size: 4px 100%, 100% 100%;
+	background-repeat: repeat-x;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.27);
+	border: 2px #000 solid;
+  }
+  
+  .btn-volume {
+	width: 5px;
+	height: 75px;
+	background-color: #0e0e0e;
+	position: absolute;
+	left: -5px;
+	border-radius: 3px 0 0 3px;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 71px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15),
+	  inset 0 0 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+  }
+  
+  .btn-volume-up {
+	top: 101px;
+  }
+  
+  .btn-volume-down {
+	top: 180px;
+  }
+  
+  .btn-power {
+	width: 4px;
+	height: 68px;
+	background: #000;
+	position: absolute;
+	right: -4px;
+	top: 82px;
+	border-radius: 0 3px 3px 0;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 64px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-power-act {
+	position: absolute;
+	height: 100%;
+	left: -1px;
+	right: -1px;
+	top: 0;
+	cursor: pointer;
+  }
+  
+  .header {
+	top: 0;
+	width: 100%;
+	height: 55px;
+	position: relative;
+  }
+  
+  .detector {
+	position: absolute;
+	height: 11px;
+	background: #0a0a0a;
+	left: 50%;
+	top: 19px;
+	width: 19px;
+	margin-left: -10px;
+	border-radius: 10px;
+  }
+  
+  .camera {
+	position: absolute;
+	height: 9px;
+	left: 50%;
+	top: 20px;
+	margin-left: 20px;
+	width: 9px;
+	border-radius: 10px;
+	background-image: linear-gradient(135deg, black 1px, #787679);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 0 3px #0a0a0a;
+  }
+  
+  .camera:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 4px;
+	height: 3px;
+	background: #32323e;
+	border-radius: 100%;
+	transform: rotate(-45deg);
+  }
+  
+  .camera:after {
+	content: "";
+	display: block;
+	width: 3px;
+	height: 3px;
+	left: 3px;
+	top: 3px;
+	position: absolute;
+	border-radius: 3px;
+	background-image: radial-gradient(50% 50%, #7c7f92, transparent);
+  }
+  
+  .display {
+	width: 320px;
+	height: 568px;
+	background: #000;
+	background-size: auto 100%;
+	position: relative;
+	left: 15px;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.8), inset 0 -1px rgba(255,255,255, .2);
+	background-color: rgb(255, 255, 255);
+  }
+  
+  .footer {
+	position: relative;
+	height: 66px;
+  }
+  
+  .btn-burger {
+	position: absolute;
+	background: #fff;
+	width: 20px;
+	height: 2px;
+	left: 61px;
+	top: 22px;
+	background-image: linear-gradient(to bottom, #5d5d5d, #5a5a5a);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  .btn-burger:before,
+  .btn-burger:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  .btn-burger:before {
+	top: 6px;
+	background-image: linear-gradient(to bottom, #545454, #515151);
+  }
+  
+  .btn-burger:after {
+	top: 12px;
+	background-image: linear-gradient(to bottom, #4b4b4b, #494949);
+  }
+  
+  .btn-home {
+	height: 11px;
+	width: 16px;
+	left: 50%;
+	top: 27px;
+	margin-left: -8px;
+	position: absolute;
+	border-radius: 0 0 1px 1px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d,
+	  inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d;
+  }
+  
+  .btn-home:before,
+  .btn-home:after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 2px;
+	border-top: 2px #5d5d5d solid;
+	border-right: 2px transparent solid;
+	border-bottom: 2px transparent solid;
+	border-left: 2px transparent solid;
+  }
+  
+  .btn-home:before {
+	right: -3px;
+	border-left: 1px transparent solid;
+	transform: rotate(40deg);
+	transform-origin: top right;
+  }
+  
+  .btn-home:after {
+	left: -3px;
+	border-right: 1px transparent solid;
+	transform: rotate(-40deg);
+	transform-origin: top left;
+  }
+  
+  .btn-back {
+	position: absolute;
+	width: 17px;
+	height: 12px;
+	right: 61px;
+	top: 22px;
+	margin-top: 2px;
+	box-shadow: inset -1px -2px 0 #5d5d5d, inset -1px 2px 0 #5d5d5d,
+	  inset -2px 0 0 #5d5d5d;
+  }
+  
+  .btn-back:after {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: -2px;
+	width: 0;
+	height: 0;
+	border-top: 4px transparent solid;
+	border-left: 0;
+	border-bottom: 3px transparent solid;
+	border-right: 8px #5d5d5d solid;
+  }
