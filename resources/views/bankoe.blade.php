@@ -50,11 +50,11 @@
 
                 <div class="btn-row">
 
-                    <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Deposit</button>
+                    <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Storten</button>
 
-                    <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a> Withdraw</button>
+                    <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a>Opnemen</button>
 
-                    <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Request</button>
+                    <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Verzoek</button>
 
                 </div>
 
