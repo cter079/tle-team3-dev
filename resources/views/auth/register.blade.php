@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
 
-    <title>Inloggen</title>
+    <title>Registreren</title>
 
     <link rel="stylesheet" type="text/css" href="authenticate.css" />
 
@@ -41,10 +41,13 @@
         <form method="POST" class="login" action="{{ route('register') }}">
                 @csrf
                 <img class="icon" src="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" />
-
+                <div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+                    <input id="name" type="text" class="login__input" placeholder="username/Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-                    <input type="text" id="email" name="email" class="login__input" placeholder="User name / Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input type="text" id="email" name="email" class="login__input" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 				</div>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -53,17 +56,15 @@
                 @enderror
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-                    <input type="password" id="password" class="login__input" placeholder="Password" name ="password" required autocomplete="current-password">
+                    <input id="password" type="password" class="login__input" placeholder="Password" name="password" required autocomplete="new-password">
+
 				</div>
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                <div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-                    <input type="password" id="password-confirm" class="login__input" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
-				</div>
+
                     <button type="submit" class="button login__submit">
                         {{ __('Register') }}
                     </button>		
