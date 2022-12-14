@@ -5,7 +5,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.navbar-inverse .navbar-toggler-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/120px-Hamburger_icon.svg.png?20160819113547');}
 html,
 body {
     display: grid;
