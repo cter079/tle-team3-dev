@@ -58,22 +58,10 @@
 </svg>              </div>
 </div>
 <div class="navigation">
-			<button onclick="plusDivs(-1)">Notificaties</button>
-			<button onclick="plusDivs(+1)">Chats</button>
+			<button onclick="plusDivs(-1)">Chats</button>
+			<button onclick="plusDivs(+1)">Notificaties</button>
 </div>
-			<div class="mySlides">
-				<div class="form">
-					@foreach($notifications as $notification)
-					<button class="chatButton2" onclick="window.location.href=`{{url('/wiki')}}`;">
-					<img class="profile-image" src="https://www.freeiconspng.com/uploads/status-warning-icon-png-29.png" alt="">
-					<p style="cursor:pointer">{{$notification->message}}</p>
-</button>
-<hr>
-
-					@endforeach
-				</div>
-			</div>
-			<div class="mySlides">
+<div class="mySlides">
 				<div class="form">
 				<div class="search-box">
 		  <div class="input-wrapper">
@@ -98,6 +86,19 @@
 
 				</div>
 			</div>
+			<div class="mySlides">
+				<div class="form">
+					@foreach($notifications as $notification)
+					<button class="chatButton2" onclick="window.location.href=`{{url('/wiki')}}`;">
+					<img class="profile-image" src="https://www.freeiconspng.com/uploads/status-warning-icon-png-29.png" alt="">
+					<p style="cursor:pointer">{{$notification->message}}</p>
+</button>
+<hr>
+
+					@endforeach
+				</div>
+			</div>
+			
 	</div>
 		</div>
 		<div class="footer">

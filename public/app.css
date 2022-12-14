@@ -297,8 +297,7 @@ background: url(https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d205
 }
 html {
 	font-family: sans-serif;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+	
 }
 body {
 	margin: 0;
@@ -606,7 +605,7 @@ a:hover {
 	text-decoration: underline;
 }
 .wrapAll {
-	width: 100%.
+	width: 100%;
 }
 .sidebar {
 	float: left;
