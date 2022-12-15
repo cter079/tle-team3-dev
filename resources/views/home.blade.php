@@ -37,10 +37,23 @@
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
                <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
-               <div class="app" style="cursor:pointer">Loguit</div>
+               <div class="app" style="cursor:pointer"onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit(); window.open('','_self').close()
+
+">Loguit</div>
                
             </div>
-         
+            <div class="icons2">
+ 
+               <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/settings')}}`;">Settings</div>
+               <div class="app" style="cursor:pointer"></div>
+               <div class="app" style="cursor:pointer" ></div>
+               <div class="app" style="cursor:pointer"></div>
+               
+            </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
       </div>
     </div>
     <div class="footer">

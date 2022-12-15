@@ -55,5 +55,11 @@ Auth::routes();
   Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');
 
 
+  Route::post('/reset', [App\Http\Controllers\AppController::class, 'reset'])->name('reset');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/settings', function () { 
+
+  return view('settings'); 
+});

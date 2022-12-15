@@ -125,4 +125,15 @@ class AppController extends Controller
             $notification->save();
         }
     }
+
+    public function reset(){
+        $account_id = Auth::id();
+        $deleteMessages = Messages::where('account_id', $account_id)->delete();
+        $deleteNotifications = Notifications::where('account_id', $account_id)->delete();
+$money= 2234;
+User::where('id',$account_id)->update(['saldo'=>$money]);
+
+
+        return view('home');
+    }
 }
