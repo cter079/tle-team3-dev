@@ -48,7 +48,7 @@ class AppController extends Controller
         $chats = Messages::where([
             ['account_id', '=', Auth::id()],
             ['chat_id', '=', $id],
-        ])->orWhere([['account_id', "=", 5], ['chat_id', '=', $id]])->get();
+        ])->orWhere([['account_id', "=", 5], ['chat_id', '=', $id]])->orWhere([['account_id', "=", 10], ['chat_id', '=', $id]])->get();
         return view('chat', ['chatContaints' => $chats], ['chats' => $chatName]);
     }
     public function saldoView()

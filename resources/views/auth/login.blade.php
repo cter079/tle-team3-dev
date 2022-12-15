@@ -39,7 +39,7 @@
 		<div class="screen__content">
         <form method="POST" class="login" action="{{ route('login') }}">
                 @csrf
-                <img class="icon" src="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" />
+                <img class="icon" src="img/burnerphone.png" />
 
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
