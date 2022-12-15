@@ -48,7 +48,7 @@ class AppController extends Controller
         $chats = Messages::where([
             ['account_id', '=', Auth::id()],
             ['chat_id', '=', $id],
-        ])->orWhere([['account_id', "=", 5],['chat_id', '=', $id]])->get();
+        ])->orWhere([['account_id', "=", 5], ['chat_id', '=', $id]])->get();
         return view('chat', ['chatContaints' => $chats], ['chats' => $chatName]);
     }
     public function saldoView()
@@ -57,17 +57,16 @@ class AppController extends Controller
 
         $saldo = User::select("saldo")
             ->where('id', Auth::id())->first();
-            
-            // dd($saldo["saldo"]);
-       
-        if($saldo["saldo"] <= 0){
+
+        // dd($saldo["saldo"]);
+
+        if ($saldo["saldo"] <= 0) {
             $notification = new Notifications();
             $notification->message = "U heeft geen geld meer, u kan daardoor rood gaan staan. Let op! Geld lenen kost geld.";
             $notification->account_id = $account_id;
             $notification->save();
         }
         return view('bankoe', ['saldo' => $saldo]);
-
     }
 
     public function sendMessage(Request $request)
@@ -81,10 +80,12 @@ class AppController extends Controller
 
 
         $data = Query::select("*")
-            ->where([[
-                'query',
-                'LIKE',
-                '%' . $message . '%'],['chat_id', $chat_id]
+            ->where([
+                [
+                    'query',
+                    'LIKE',
+                    '%' . $message . '%'
+                ], ['chat_id', $chat_id]
             ])->get();
 
 
@@ -117,21 +118,26 @@ class AppController extends Controller
         $chatReceived->direction = "received";
         $chatReceived->messages = $data[0]["response"];
         $chatReceived->save();
+       
         if ($replay == "Oké ik zie je straks") {
+            $oldSaldo = User::select('saldo')->where('id', $account_id)->first();
+            $newSaldo = $oldSaldo['saldo'] - 200;
+            User::where('id', $account_id)->update(['saldo' => $newSaldo]);
             $notification = new Notifications();
 
-            $notification->message = "Pasop! Je bent te aardig. Dit zet je zwak neer in jouw buurt waardoor je sneller overvallen kan worden.";
+            $notification->message = "Er is geld afgeschreven van uw bank voor: Feestje";
             $notification->account_id = $account_id;
             $notification->save();
         }
     }
 
-    public function reset(){
+    public function reset()
+    {
         $account_id = Auth::id();
         $deleteMessages = Messages::where('account_id', $account_id)->delete();
         $deleteNotifications = Notifications::where('account_id', $account_id)->delete();
-$money= 2234;
-User::where('id',$account_id)->update(['saldo'=>$money]);
+        $money = 2234;
+        User::where('id', $account_id)->update(['saldo' => $money]);
 
 
         return view('home');
