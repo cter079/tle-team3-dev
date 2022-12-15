@@ -142,4 +142,10 @@ class AppController extends Controller
 
         return view('home');
     }
+
+    public function settings(){
+        $account_id = Auth::id();
+
+        return view('settings');
+    }
 }

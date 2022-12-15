@@ -43,7 +43,7 @@
                 <img class="icon" src="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" />
                 <div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-                    <input id="name" type="text" class="login__input" placeholder="username/Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="name" type="text" class="login__input" placeholder="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
@@ -64,6 +64,12 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember" required>
+                    <label class="form-check-label" onclick="window.location.href=`privacy`;" for="remember">
+                        {{ __('Accept privacy policy') }}
+                    </label>
+                </div>
 
                     <button type="submit" class="button login__submit">
                         {{ __('Register') }}

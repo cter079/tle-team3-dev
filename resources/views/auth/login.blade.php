@@ -43,7 +43,7 @@
 
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-                    <input type="text" id="email" name="email" class="login__input" placeholder="User name / Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input type="text" id="email" name="email" class="login__input" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 				</div>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -69,11 +69,9 @@
                     <button type="submit" class="button login__submit">
                         {{ __('Login') }}
                     </button>
-                    @if (Route::has('password.request'))
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
+                    <a class="btn btn-link" href="{{ route('register') }}">
+                        {{ __('Nog geen account?') }}
                     </a>
-                    @endif			
 			</form>
 		</div>
 		<div class="screen__background">

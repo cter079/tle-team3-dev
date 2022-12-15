@@ -1,0 +1,2 @@
+<h1>Privacy policy Burnerphone Game:</h1>
+<p>Wij slaan uw inloggegevens veilig op in onze databases die versleuteld zijn. Wachtwoorden worden gehashed waardoor het achterhalen van het wachtwoord voor zowel de beheerder van de database (Camryn Terlouw) als een hacker onmogelijk is. Er wordt verder niks met uw gegevens zoals e-mail of uw ingetoetste antwoorden gedaan. Alles wordt veilig opgeslagen zodat alleen de beheerder erbij kan.</p>
