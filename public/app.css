@@ -1006,6 +1006,7 @@ span.user {
   
   .search-box {
 	padding: 10px 13px;
+	max-width: 30%;
 	
 	
   }
