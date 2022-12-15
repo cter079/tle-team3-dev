@@ -91,11 +91,31 @@ class AppController extends Controller
 
         $replay = $data[0]["response"];
         $id = $data[0]["id"];
+        if ($replay == "Oké ik zie je straks") {
+            $oldSaldo = User::select('saldo')->where('id', $account_id)->first();
+            $newSaldo = $oldSaldo['saldo'] - 200;
+            User::where('id', $account_id)->update(['saldo' => $newSaldo]);
+            $notification = new Notifications();
+
+            $notification->message = "Er is geld afgeschreven van uw bank voor: Feestje";
+            $notification->account_id = $account_id;
+            $notification->save();
+        }
+        else{
+            $notification = new Notifications();
+
+            $notification->message = "Goed geantwoord! Dit is hoe jongeren met elkaar communiceren";
+            $notification->account_id = $account_id;
+            $notification->save();
+        }
+
+        $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+
         $this->storeMessage($message, $chat_id, $account_id, $data, $name, $replay);
 
         $queries = Responses::select("response")
             ->where('query_id', $id)->get();
-        return json_encode(["replay" => $replay, "queries" => $queries]);
+        return json_encode(["replay" => $replay, "queries" => $queries, "notification" => $notification['message']]);
     }
 
     public function storeMessage($message, $chat_id, $account_id, $data, $name, $replay)
@@ -119,16 +139,7 @@ class AppController extends Controller
         $chatReceived->messages = $data[0]["response"];
         $chatReceived->save();
        
-        if ($replay == "Oké ik zie je straks") {
-            $oldSaldo = User::select('saldo')->where('id', $account_id)->first();
-            $newSaldo = $oldSaldo['saldo'] - 200;
-            User::where('id', $account_id)->update(['saldo' => $newSaldo]);
-            $notification = new Notifications();
-
-            $notification->message = "Er is geld afgeschreven van uw bank voor: Feestje";
-            $notification->account_id = $account_id;
-            $notification->save();
-        }
+       
     }
 
     public function reset()
