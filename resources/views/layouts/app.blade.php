@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar navbar-inverse bg-white navbar-toggleable-md" >
    <div class="container">
-      <a class="navbar-brand" style="color:black;"href="#">{{ config('app.name', 'Burnerphone') }}</a>
+      <a class="navbar-brand" style="color:black;"href="#"><img src="https://i.ibb.co/Zzh16rv/burnerphone.png" style="width:30px;">{{ config('app.name', 'Burnerphone') }}</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleCenteredNav" aria-controls="navbarsExampleCenteredNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>    

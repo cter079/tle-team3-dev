@@ -61,6 +61,8 @@ Route::get('/request', function () {
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'showChats'])->name('gappie');
   Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');
+  Route::post('/deleteaccount', [App\Http\Controllers\AppController::class, 'deleteAccount'])->name('deleteaccount');
+
   Route::get('/settings', [App\Http\Controllers\AppController::class, 'settings'])->name('settings');
 
   

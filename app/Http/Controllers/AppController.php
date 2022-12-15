@@ -159,4 +159,10 @@ class AppController extends Controller
 
         return view('settings');
     }
+    public function deleteAccount(){
+        $account_id = Auth::id();
+        $account = User::where('id', $account_id)->delete();
+
+        return view('/login');
+    }
 }

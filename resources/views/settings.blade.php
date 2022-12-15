@@ -43,6 +43,14 @@
 " value="Reset Progress">
         </div>
     </form>                      </div>
+    <div class="icons3">
+
+                    <form method="POST" action="{{ route('deleteaccount')}}">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger delete-user" onclick=" return confirm('Bij het klikken van deze knop zullen alle opgeslagen accountgegevens worden verwijderd. Wilt u doorgaan?');" value="Delete Account">
+        </div>
+    </form>                      </div>
             </div>
                     <div class="footer">
                         <div class="btn-burger"></div>
