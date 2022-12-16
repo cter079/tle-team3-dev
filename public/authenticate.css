@@ -189,34 +189,7 @@ body {
 	position: relative;
 	background-color: #141414;
 	background-repeat: no-repeat;
-	background-image: linear-gradient(
-		45deg,
-		transparent,
-		transparent 50%,
-		rgba(255, 255, 255, 0.2) 50%,
-		transparent
-	  ),
-	  linear-gradient(
-		135deg,
-		transparent,
-		transparent 50%,
-		rgba(255, 255, 255, 0.17) 50%,
-		transparent
-	  ),
-	  linear-gradient(
-		135deg,
-		transparent,
-		transparent 50%,
-		rgba(255, 255, 255, 0.12) 50%,
-		transparent
-	  ),
-	  linear-gradient(
-		45deg,
-		transparent,
-		transparent 50%,
-		rgba(255, 255, 255, 0.08) 50%,
-		transparent
-	  );
+	
 	background-size: 320px 320px, 320px 320px, 320px 320px, 320px 320px;
 	background-position: left top, right top, left bottom, right bottom;
 	box-shadow: 0 0 1px #000;
@@ -229,18 +202,7 @@ body {
 	right: 4px;
 	bottom: 4px;
 	left: 4px;
-	background-image: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0.12) 0,
-		rgba(0, 0, 0, 0.12) 1px,
-		transparent 1px,
-		transparent 2px,
-		rgba(0, 0, 0, 0.07) 2px,
-		rgba(0, 0, 0, 0.06) 3px,
-		transparent 3px,
-		transparent 4px
-	  ),
-	  linear-gradient(to bottom, #212121, #282828 20px, #171717);
+	
 	background-size: 4px 100%, 100% 100%;
 	background-repeat: repeat-x;
 	box-shadow: 0 0 1px rgba(255, 255, 255, 0.27);
@@ -373,95 +335,19 @@ body {
 	height: 66px;
   }
   
-  .btn-burger {
-	position: absolute;
-	background: #fff;
-	width: 20px;
-	height: 2px;
-	left: 61px;
-	top: 22px;
-	background-image: linear-gradient(to bottom, #5d5d5d, #5a5a5a);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  }
-  
-  .btn-burger:before,
-  .btn-burger:after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  }
-  
-  .btn-burger:before {
-	top: 6px;
-	background-image: linear-gradient(to bottom, #545454, #515151);
-  }
-  
-  .btn-burger:after {
-	top: 12px;
-	background-image: linear-gradient(to bottom, #4b4b4b, #494949);
-  }
+ 
   
   .btn-home {
-	height: 11px;
-	width: 16px;
+	height: 50px;
+	width: 50px;
 	left: 50%;
-	top: 27px;
-	margin-left: -8px;
+	top: 8px;
 	position: absolute;
-	border-radius: 0 0 1px 1px;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d,
-	  inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d;
+	border-radius: 50%;
+	transform: translate(-50%, 0);
+
   }
   
-  .btn-home:before,
-  .btn-home:after {
-	content: "";
-	width: 12px;
-	height: 12px;
-	position: absolute;
-	top: 2px;
-	border-top: 2px #5d5d5d solid;
-	border-right: 2px transparent solid;
-	border-bottom: 2px transparent solid;
-	border-left: 2px transparent solid;
-  }
+
   
-  .btn-home:before {
-	right: -3px;
-	border-left: 1px transparent solid;
-	transform: rotate(40deg);
-	transform-origin: top right;
-  }
   
-  .btn-home:after {
-	left: -3px;
-	border-right: 1px transparent solid;
-	transform: rotate(-40deg);
-	transform-origin: top left;
-  }
-  
-  .btn-back {
-	position: absolute;
-	width: 17px;
-	height: 12px;
-	right: 61px;
-	top: 22px;
-	margin-top: 2px;
-	box-shadow: inset -1px -2px 0 #5d5d5d, inset -1px 2px 0 #5d5d5d,
-	  inset -2px 0 0 #5d5d5d;
-  }
-  
-  .btn-back:after {
-	content: "";
-	position: absolute;
-	left: -4px;
-	top: -2px;
-	width: 0;
-	height: 0;
-	border-top: 4px transparent solid;
-	border-left: 0;
-	border-bottom: 3px transparent solid;
-	border-right: 8px #5d5d5d solid;
-  }

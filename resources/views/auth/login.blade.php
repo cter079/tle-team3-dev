@@ -12,10 +12,10 @@
 
 
 </head>
-
 @extends('layouts.app')
 
 @section('content')
+
 <div class="wrapper">
     <div class="device">
       <div class="screen"></div>
