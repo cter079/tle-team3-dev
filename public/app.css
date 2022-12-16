@@ -265,6 +265,35 @@ border-radius: 15px;
 box-shadow: 0px 5px 5px #33333335;
 background: white;
 }
+.icons div:hover{
+	transform: scale(0.9);
+	
+	
+	}
+.icons4{
+	
+		justify-content: center;
+		display: flex;
+		
+	}
+	.icons4 div{
+	margin-right: 10px;
+	margin-left: 10px;
+margin-top: 340px;
+	z-index: 100;
+	width: 50px;
+	height: 50px;
+	line-height: 130px;
+	color: white;
+	border-radius: 15px;
+	box-shadow: 0px 5px 5px #33333335;
+	background: white;
+	}
+	.icons4 div:hover{
+		transform: scale(0.9);
+		
+		
+		}
 .icons2 div:hover{
 transform: scale(0.9);
 
@@ -303,7 +332,7 @@ transform: scale(0.9);
   .notify{  
 	font-family: 'Open Sans', sans-serif;
 
-	width:80%;
+	width:90%;
 	height:0px;  
 	word-break:break-all;
 	box-sizing:border-box;
@@ -361,7 +390,7 @@ right: 4px;
 
 .screen2{
 	height: 100%;
-background: url(https://media1.popsugar-assets.com/files/thumbor/l0S8NDGEb_M7mTeOvh2xXP9H2aI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/09/23/911/n/1922507/33fff363faf1f015_eberhard-grossgasteiger-jCL98LGaeoE-unsplash/i/Pastel-Sky-iPhone-Wallpaper.jpg) ;
+background: url(https://mfiles.alphacoders.com/616/616737.jpg) ;
 }
 .screen3{
 	height: 100%;
@@ -385,6 +414,31 @@ background: url(https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d205
 		background-size: 50px;
 		}
 
+		.icons4 :nth-child(1){
+			background-image: url(img/phone.png);
+			background-size: 60px;
+			background-position: 50%;
+			}
+			.icons4 :nth-child(2){
+			background-image: url(https://i.pinimg.com/originals/2b/2e/0b/2b2e0b994c2d4a311e758e82402f49e6.jpg);
+			background-size: 100px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+
+			}
+			.icons4 :nth-child(3){
+				background-image: url(https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Messages-512.png);
+				background-size: 60px;
+				background-repeat: no-repeat;
+				background-position: 50%;
+			}
+			.icons4 :nth-child(4){
+				background-image: url(https://i.pinimg.com/originals/ae/2e/56/ae2e5651b74a00d5d31b8c6453fa3ebb.png);
+				background-size: 60px;
+				background-position: 50%;
+
+				}
+		
 
 @font-face {
 	font-family: "Linux Libertine";

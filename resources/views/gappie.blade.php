@@ -71,7 +71,7 @@
 						<div class=" friend-drawer friend-drawer--onhover">
 							<img class="profile-image" src="{{$chat->image}}" alt="">
 							<div class="text" >
-								<h6>{{$chat->name}}</h6>
+								<h4><strong>{{$chat->name}}</strong></h4>
 								<p class="text-muted">{{$chat->description}}</p>
 							</div>
 						</div>
