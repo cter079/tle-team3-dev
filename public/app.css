@@ -258,7 +258,10 @@ margin-left: 20px;
 	
 }
 .icons div{
-margin: 10px;
+margin-left: 13px;
+margin-right: 13px;
+margin-top: 10px;
+margin-bottom: 10px;
 z-index: 100;
 width: 50px;
 height: 50px;
@@ -280,8 +283,8 @@ background: white;
 		
 	}
 	.icons4 div{
-	margin-right: 10px;
-	margin-left: 10px;
+	margin-right: 13px;
+	margin-left: 13px;
 margin-top: 340px;
 	z-index: 100;
 	width: 50px;
@@ -309,8 +312,8 @@ transform: scale(0.9);
 }
 .icons2 div{
 margin-top: 20px;
-margin-left: 10px;
-margin-right: 10px;
+margin-left: 13px;
+margin-right: 13px;
 z-index: 100;
 width: 50px;
 height: 50px;
@@ -1132,7 +1135,7 @@ span.user {
 	background: #000;
 	position: absolute;
 	right: -4px;
-	top: 82px;
+	top: 180px;
 	border-radius: 0 3px 3px 0;
 	background-image: linear-gradient(
 	  to bottom,
