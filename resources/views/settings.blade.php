@@ -29,35 +29,51 @@
             </div>
 
             <div class="display">
-                <div class="screen2">
+                <div class="screen3">
                     <div id="MyClockDisplay" class="clock" style="background-color: black; color:white; padding-left:5px;" onload="showTime()"></div>
-<h1 class="title">Settings</h1>
-                    <div class="icons3">
+                    <h1 class="title">Settings</h1>
+                    <center>
+                        <div class="icons3">
 
-                    <form method="POST" action="{{ route('reset')}}">
-        {{ csrf_field() }}
-        <div class="form-group">
-            <input type="submit" class="btn btn-danger delete-user" onclick="if(confirm('Bij het klikken van deze knop zullen alle opgeslagen berichten verwijderd worden en begin je dus opnieuw. Wilt u doorgaan?')){localStorage.clear()
-            }else{
-            };
-" value="Reset Progress">
-        </div>
-    </form>                      </div>
-    <div class="icons3">
+                            <form method="POST" id="delete-progress"action="{{ route('reset')}}" onsubmit="event.preventDefault(); if(confirm('Bij het klikken van deze knop zullen alle opgeslagen berichten verwijderd worden en begin je dus opnieuw. Wilt u doorgaan?')){localStorage.clear(); document.querySelector('#delete-progress').submit();}else{console.log('kaas')};">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-danger delete-user"  value="Reset Progress">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="icons3">
 
-                    <form method="POST" action="{{ route('deleteaccount')}}">
-        {{ csrf_field() }}
-        <div class="form-group">
-            <input type="submit" class="btn btn-danger delete-user" onclick=" return confirm('Bij het klikken van deze knop zullen alle opgeslagen accountgegevens worden verwijderd. Wilt u doorgaan?');" value="Delete Account">
-        </div>
-    </form>                      </div>
-            </div>
-                    <div class="footer">
-                        <div class="btn-burger"></div>
-                        <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home" style="cursor:pointer"></div>
-                        <div class="btn-back" onclick="window.history.go(-1); return false;"></div>
-                    </div>
+                            <form method="POST" id="delete-account" action="{{ route('deleteaccount')}}" onsubmit=" event.preventDefault(); if(confirm('Bij het klikken van deze knop zullen alle opgeslagen accountgegevens worden verwijderd. Wilt u doorgaan?')){document.querySelector('#delete-account').submit();}else{};">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-danger delete-user" value="Delete Account">
+                                </div>
+                            </form>
+
+                        </div>
+                        <div>
+                            <h3>Changelog:</h3>
+                            <h4>19-12-2022:</h4>
+                            <p>- Fixed Bankoe UI</p>
+                            <p>- New logo</p>
+                            <h4>16-12-2022:</h4>
+                            <p>- Fixed login not working</p>
+                            <p>- Added new notifications</p>
+                        </div>
                 </div>
+
+
+                </center>
+            </div>
+            <div class="footer">
+                <div class="btn-burger"></div>
+                <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home" style="cursor:pointer"></div>
+                <div class="btn-back" onclick="window.history.go(-1); return false;"></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script>
     function showTime() {

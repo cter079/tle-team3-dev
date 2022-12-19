@@ -163,6 +163,6 @@ class AppController extends Controller
         $account_id = Auth::id();
         $account = User::where('id', $account_id)->delete();
 
-        return view('/login');
+        return view('login');
     }
 }

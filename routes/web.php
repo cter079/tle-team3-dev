@@ -56,6 +56,7 @@ Route::get('/request', function () {
   Route::get('/wiki', function () {
     return view('wiki');
   });
+
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
   Route::get('/bankoe', [App\Http\Controllers\AppController::class, 'saldoView'])->name('bankoe');
 
