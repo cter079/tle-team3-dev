@@ -52,14 +52,14 @@
 
                 <h1>Current account:</h1> 
 
-                <h2>€ 75,42</h2> 
+                <h2>€ {{$bank->bank}}</h2> 
 
             </div> 
 
             <div class="amount2"> 
 
-                <form> 
-
+                <form id="deposit" method="POST" action="{{url('/depositMoney')}}"> 
+                {{csrf_field()}}
                     <label for="money">€</label> 
 
                     <input type="number" id="money" name="amount"> 
@@ -67,10 +67,10 @@
                 </form> 
 
             </div> 
-
+            <p style="color:white;">U kunt niet meer dan uw eigen saldo storten</p>
             <div class="submit-btn"> 
 
-                <a href="bankoe"><button class="submit">Submit</button></a> 
+                <button class="submit" onclick="document.querySelector('#deposit').submit();">Submit</button>
 
             </div> 
 

@@ -33,6 +33,15 @@
                     <div id="MyClockDisplay" class="clock" style="background-color: black; color:white; padding-left:5px;" onload="showTime()"></div>
                     <h1 class="title">Settings</h1>
                     <center>
+                    <div>
+                            <h3>Changelog:</h3>
+                            <h4>19-12-2022:</h4>
+                            <p>- Fixed Bankoe UI</p>
+                            <p>- New logo</p>
+                            <h4>16-12-2022:</h4>
+                            <p>- Fixed login not working</p>
+                            <p>- Added new notifications</p>
+                        </div>
                         <div class="icons3">
 
                             <form method="POST" id="delete-progress"action="{{ route('reset')}}" onsubmit="event.preventDefault(); if(confirm('Bij het klikken van deze knop zullen alle opgeslagen berichten verwijderd worden en begin je dus opnieuw. Wilt u doorgaan?')){localStorage.clear(); document.querySelector('#delete-progress').submit();}else{console.log('kaas')};">
@@ -52,15 +61,7 @@
                             </form>
 
                         </div>
-                        <div>
-                            <h3>Changelog:</h3>
-                            <h4>19-12-2022:</h4>
-                            <p>- Fixed Bankoe UI</p>
-                            <p>- New logo</p>
-                            <h4>16-12-2022:</h4>
-                            <p>- Fixed login not working</p>
-                            <p>- Added new notifications</p>
-                        </div>
+                    
                 </div>
 
 

@@ -84,7 +84,7 @@
 
                     <h1>Opgespaard:</h1>
 
-                    <h2>€ 2145,67</h2>
+                    <h2>€ {{$bank->bank}}</h2>
 
                 </div>
 

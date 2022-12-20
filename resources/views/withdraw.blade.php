@@ -52,25 +52,26 @@
 
                 <h1>Savings account:</h1> 
 
-                <h2>€ 2145,67</h2> 
+                <h2>€ {{$bank->bank}}</h2> 
 
             </div> 
 
             <div class="amount"> 
 
-                <form> 
+<form id="withdraw" method="POST" action="{{url('/withdrawMoney')}}"> 
+{{csrf_field()}}
+    <label for="money">€</label> 
 
-                    <label for="money">€</label> 
+    <input type="number" id="money" name="amount"> 
 
-                    <input type="number" id="money" name="amount"> 
+</form> 
 
-                </form> 
+</div> 
 
-            </div> 
-
+            <p style="color:white;">U kunt niet meer opnemen dan u heeft.</p>
             <div class="submit-btn"> 
 
-                <a href="bankoe"><button class="submit">Submit</button></a> 
+                <button class="submit" onclick="document.querySelector('#withdraw').submit();">Submit</button>
 
             </div> 
 

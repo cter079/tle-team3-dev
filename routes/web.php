@@ -30,24 +30,6 @@ Route::get('/wiki', function () {
 });
 
 
-
-
-Route::get('/deposit', function () { 
-
-  return view('deposit'); 
-
-}); 
-
-
-
-Route::get('/withdraw', function () { 
-
-  return view('withdraw'); 
-
-}); 
-
-
-
 Route::get('/request', function () { 
 
   return view('request'); 
@@ -58,7 +40,13 @@ Route::get('/request', function () {
   });
 
   Route::get('/chat/{id}', [App\Http\Controllers\AppController::class, 'chatView'])->name('chat');
-  Route::get('/bankoe', [App\Http\Controllers\AppController::class, 'saldoView'])->name('bankoe');
+  Route::get('/bankoe', [App\Http\Controllers\BankoeController::class, 'saldoView'])->name('bankoe');
+  Route::get('/deposit', [App\Http\Controllers\BankoeController::class, 'deposit'])->name('deposit');
+  Route::get('/withdraw', [App\Http\Controllers\BankoeController::class, 'withdraw'])->name('withdraw');
+
+  Route::post('/depositMoney', [App\Http\Controllers\BankoeController::class, 'depositMoney'])->name('depositMoney');
+  Route::post('/withdrawMoney', [App\Http\Controllers\BankoeController::class, 'withdrawMoney'])->name('withdrawMoney');
+
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'showChats'])->name('gappie');
   Route::post('/sendMessage', [App\Http\Controllers\AppController::class, 'sendMessage'])->name('sendMessage');

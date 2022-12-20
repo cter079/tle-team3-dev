@@ -51,23 +51,7 @@ class AppController extends Controller
         ])->orWhere([['account_id', "=", 5], ['chat_id', '=', $id]])->orWhere([['account_id', "=", 10], ['chat_id', '=', $id]])->get();
         return view('chat', ['chatContaints' => $chats], ['chats' => $chatName]);
     }
-    public function saldoView()
-    {
-        $account_id = Auth::id();
-
-        $saldo = User::select("saldo")
-            ->where('id', Auth::id())->first();
-
-        // dd($saldo["saldo"]);
-
-        if ($saldo["saldo"] <= 0) {
-            $notification = new Notifications();
-            $notification->message = "U heeft geen geld meer, u kan daardoor rood gaan staan. Let op! Geld lenen kost geld.";
-            $notification->account_id = $account_id;
-            $notification->save();
-        }
-        return view('bankoe', ['saldo' => $saldo]);
-    }
+   
 
     public function sendMessage(Request $request)
     {
