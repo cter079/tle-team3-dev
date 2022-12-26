@@ -77,11 +77,11 @@ class AppController extends Controller
         $id = $data[0]["id"];
         if ($replay == "Oké ik zie je straks") {
             $oldSaldo = User::select('saldo')->where('id', $account_id)->first();
-            $newSaldo = $oldSaldo['saldo'] - 200;
+            $newSaldo = $oldSaldo['saldo'] - 20;
             User::where('id', $account_id)->update(['saldo' => $newSaldo]);
             $notification = new Notifications();
 
-            $notification->message = "Er is geld afgeschreven van uw bank voor: Feestje";
+            $notification->message = "Er is geld afgeschreven van uw bank voor: chaps voor voetbal";
             $notification->account_id = $account_id;
             $notification->save();
         }
