@@ -173,6 +173,7 @@ hr{
 .wrapper .form .inbox .msg-header {
     max-width: 70%;
     margin-left: 10px;
+	margin-bottom: 5px;
 }
 .chatButton{
 	width: 100%;
