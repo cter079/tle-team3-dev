@@ -43,6 +43,7 @@ Route::get('/request', function () {
   Route::get('/bankoe', [App\Http\Controllers\BankoeController::class, 'saldoView'])->name('bankoe');
   Route::get('/deposit', [App\Http\Controllers\BankoeController::class, 'deposit'])->name('deposit');
   Route::get('/withdraw', [App\Http\Controllers\BankoeController::class, 'withdraw'])->name('withdraw');
+  Route::get('/tutorial', [App\Http\Controllers\TutorialController::class, 'tutorial'])->name('tutorial');
 
   Route::post('/depositMoney', [App\Http\Controllers\BankoeController::class, 'depositMoney'])->name('depositMoney');
   Route::post('/withdrawMoney', [App\Http\Controllers\BankoeController::class, 'withdrawMoney'])->name('withdrawMoney');

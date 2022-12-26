@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="app.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <audio id="mySound3" src="<?= asset('audio/receivedNoti.mp3') ?>"></audio>
+
 </head>
 
 <body>
@@ -30,6 +32,25 @@
 
       <div class="display">
         <div class="screen2">
+        <div class="notifyWrapper">
+            <div class="notify" onclick="window.location.href=`{{route('tutorial')}}`;">
+              <div class="header">
+                <div class="contents">
+                  <div class="left">
+                  <img src="https://i.ibb.co/Zzh16rv/burnerphone.png" style="width:10px;">
+
+                     Burnerphone
+                  </div>
+                  <div class="right">
+                    Now
+                  </div>
+                </div>
+                <div class="main-content">
+                  <span id="notifyType" class=""></span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="phone-header" style="display: flex; font-size:14px;">
           <div style="background-color: transparent; color:white; padding-left:5px; text-align:center;" class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
   <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
@@ -100,9 +121,36 @@
     document.getElementById("MyClockDisplay").textContent = time;
 
     setTimeout(showTime, 1000);
-
   }
+  const firstTime = localStorage.getItem("first_time");
+if(!firstTime) {
+    localStorage.setItem("first_time","1");
 
+  setTimeout(function() {
+            document.getElementById('mySound3').play();
+
+            document.querySelector(".notify").classList.toggle("active");
+            document.querySelector("#notifyType").textContent = `Welkom {{ Auth::user()->name }}! Klik hier voor de handleiding!`;
+
+            setTimeout(function() {
+              document.querySelector(".notify").classList.remove("active");
+              document.querySelector("#notifyType").textContent = '';
+            }, 10000);
+          }, 2000);
+        }
+        else{
+          setTimeout(function() {
+            document.getElementById('mySound3').play();
+
+            document.querySelector(".notify").classList.toggle("active");
+            document.querySelector("#notifyType").textContent = `Welkom terug {{ Auth::user()->name }}!`;
+
+            setTimeout(function() {
+              document.querySelector(".notify").classList.remove("active");
+              document.querySelector("#notifyType").textContent = '';
+            }, 3000);
+          }, 2000);
+        }
   showTime();
 </script>
 

@@ -109,12 +109,37 @@ body {
 	border:none;
 	border-bottom: solid 2px white; 
 }
+.right-nav{
+	padding-left: 95px;
+	 padding-right:0px; 
+}
+
+@media  screen and (max-width: 600px) {
+	.right-nav{
+		padding-left: 95px;
+		padding-right: 0px;
+	}
+}
+
+hr{
+	border-color:transparent !important;
+}
+
 
 .wrapper .form {
     padding: 20px 15px;
     min-height: 425px;
     max-height: 425px;
     overflow-y: auto;
+}
+
+@media screen and (max-width: 600px) {
+	.wrapper .form {
+		padding: 20px 15px;
+		min-height: 425px;
+		max-height: 425px;
+		overflow-y: auto;
+	}
 }
 .form3{
 	padding: 20px 15px;
@@ -196,6 +221,8 @@ padding-top: 13px;
     border-top: 1px solid #d9d9d9;
     border-radius: 40px;
 	box-shadow: 0px 5px 5px #33333335;
+	position: relative;
+	bottom: 1px;
 
 	
 }
@@ -262,7 +289,7 @@ margin-left: 13px;
 margin-right: 13px;
 margin-top: 10px;
 margin-bottom: 10px;
-z-index: 100;
+z-index: 1;
 width: 50px;
 height: 50px;
 line-height: 130px;
@@ -340,7 +367,7 @@ transform: scale(0.9);
 
 	width:90%;
 	height:0px;  
-	word-break:break-all;
+	word-break:break-word;
 	box-sizing:border-box;
 	color:rgb(0, 0, 0);  
 	background-color: rgba(255, 255, 255, 0.8);
@@ -351,6 +378,7 @@ transform: scale(0.9);
   border-radius: 10px;
   margin-bottom: 8px;
   overflow: hidden;
+  cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
   }
   .notify .header {
@@ -400,7 +428,7 @@ background: url(https://mfiles.alphacoders.com/616/616737.jpg) ;
 }
 .screen3{
 	height: 100%;
-background: url(https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg) ;
+background: url(img/background-image.png) ;
 }
 .icons :nth-child(1){
 	background-image: url(bankoe.png);
@@ -1069,6 +1097,11 @@ span.user {
 	max-width: 30%;
 	
 	
+  }
+  @media screen and (max-width: 600px) {
+	.search-box{
+		display: none;
+	}
   }
   .search-box input {
 	border-radius: 25px;
