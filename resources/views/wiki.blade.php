@@ -36,32 +36,20 @@
       <div class="display">
       <div id="MyClockDisplay" class="clock" style="background-color: black; color:white; padding-left:5px;" onload="showTime()"></div>
 <div class="form3">
-		<div class="wrapAll clearfix">
+<div class="wrapAll clearfix">
 	
 			
-			</div>
-			<div class="mainsection">
-				<div class="headerLinks">
-				</div>
-				<div class="tabs clearfix">
-					<div class="tabsLeft">
-						<ul>
-							<li><a href="#" class="active">Artikel</a></li>
-						</ul>
-					</div>
-					<div id="simpleSearch">
-						<input type="text" name="searchInput" id="searchInput" placeholder="Zoeken in wikitext" size="12" />
-						<div id="submitSearch"></div>
-					</div>
-					<div class="tabsRight">
-						<ul>
-							<li><a href="#" class="active">Read</a></li>
-							<li><a href="#">View source</a></li>						
-							<li><a href="#">View history</a></li>						
-						</ul>
-					</div>
-				
-				</div>
+    </div>
+    <div class="mainsection">
+        <div class="headerLinks">
+        </div>
+        <div class="tabs clearfix">
+            <div class="tabsLeft">
+                <ul>
+                </ul>
+            </div>
+         
+        </div>
 				<div class="article">
 					<h1>BurnerPhone</h1>
 					<p class="siteSub">Van TLE Team 3</p>

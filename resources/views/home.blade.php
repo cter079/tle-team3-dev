@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="app.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <audio id="mySound3" src="<?= asset('audio/receivedNoti.mp3') ?>"></audio>
+  <audio preload="auto"id="mySound3" src="<?= asset('audio/receivedNoti.mp3') ?>"></audio> 
 
 </head>
 
@@ -65,10 +65,10 @@
           </div>
           <div class="icons">
 
-            <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
-            <div class="app" style="cursor:pointer" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
-            <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
-            <div class="app" style="cursor:pointer" onclick="event.preventDefault();
+            <div class="app" style="cursor:pointer; text-align:center; " onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
+            <div class="app" style="cursor:pointer;text-align:center;" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
+            <div class="app" style="cursor:pointer;text-align:center;" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
+            <div class="app" style="cursor:pointer;text-align:center;" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit(); window.open('','_self').close()
 
 ">Loguit</div>

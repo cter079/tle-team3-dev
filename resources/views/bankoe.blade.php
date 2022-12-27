@@ -71,7 +71,7 @@
 
                 <div class="welcome">
 
-                    <h1>Welkom Nasim!</h1>
+                    <h1>Welkom {{Auth::user()->name}}</h1>
 
                 </div>
 
