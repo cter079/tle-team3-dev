@@ -164,14 +164,24 @@
   window.addEventListener("load", () => {
     let option1 = localStorage.getItem('{{$chatDetails->name}}')
     let option2 = localStorage.getItem('{{$chatDetails->name}} 2')
-    if (option1 == null && option2 == null) {} else {
-      let select = document.querySelector("#data");
-      let options = select.getElementsByTagName('option');
+    let select = document.querySelector("#data");
+    let options = select.getElementsByTagName('option');
+    if (option1 == null) {
+     
+    } else{
+    if (option2 == "") {
+      options[1].style.display = "none";
+      options[0].innerHTML = option1;
+      options[0].value = option1;
+    } else {
+      options[1].style.display = "block";
+
       options[0].innerHTML = option1;
       options[0].value = option1;
       options[1].innerHTML = option2;
       options[1].value = option2;
     }
+  }
   });
 
 
@@ -207,7 +217,12 @@
         let delay = Math.random() * 10000;
         let delay2 = 3000
         localStorage.setItem("{{$chatDetails->name}}", body["queries"][0]["response"])
-        localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
+        if(body["queries"][1] == undefined){
+          localStorage.setItem("{{$chatDetails->name}} 2", "")
+        }else{
+          localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
+
+        }
         document.querySelector(".status").textContent = "typing...";
 
 
@@ -223,8 +238,15 @@
           let options = select.getElementsByTagName('option');
 
           for (let i = 0; i < select.length; i++) {
+            
             options[i].innerHTML = body["queries"][i]["response"];
             options[i].value = body["queries"][i]["response"];
+            if (body["queries"][1] == undefined) {
+              options[1].style.display = "none";
+            }
+            else{
+              options[1].style.display = "block";
+            }
           }
           setTimeout(function() {
             document.getElementById('mySound3').play();
