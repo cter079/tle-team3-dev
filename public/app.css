@@ -422,7 +422,14 @@ right: 4px;
 .icons2 :nth-child(1){
 	background-image: url(https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Settings-icon.png);
 	background-size: 80px;
+
 	}
+	.icons2 :nth-child(2){
+		background-image: url(img/info-icon.png);
+		background-size: 80px;
+		background-position: 50%;
+
+		}
 
 .screen2{
 	height: 100%;

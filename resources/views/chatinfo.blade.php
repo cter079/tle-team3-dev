@@ -10,7 +10,9 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('app.css') }}">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -20,9 +22,13 @@
       <div class="screen"></div>
       <div class="btn-volume btn-volume-up"></div>
       <div class="btn-volume btn-volume-down"></div>
-      <div class="btn-power">
+      <div class="btn-power"onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit(); window.open('','_self').close()">
         <div class="btn-power-act"></div>
       </div>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
 
       <div class="header">
         <div class="detector"></div>
@@ -45,63 +51,88 @@
               </svg></div>
           </div>
           @foreach($chats as $chatDetails)
-          <div class="user-bar" style="height: 33%; display:flex; align-items:center">
-            <div class="back" style="position:relative; top:-25%;">
-              <i class="zmdi zmdi-arrow-left"  onclick="window.location.href=`{{route('gappie')}}`;"><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
-                </svg></i>
-            </div>
-            <div class="crop" style="width: 100px;height: 100px; position: relative; border-radius: 50%; left:50%; top:18%; 	transform: translate(-50%, -50%);
+          <div class="chat-profile" style="height:97%; background-color:#219473;">
+            <div class="chat-profile-img" style="width: 100px;height: 100px; position:relative; left:50%;top:13%; 	transform: translate(-50%, -50%);
 ">
-         <img src="{{$chatDetails->image}}" alt="Avatar" style="display: inline;margin: 0 auto;margin-left: -25%;height: 100%;width: auto; border-radius:50%">
-         
+              <img style="border-radius: 50%; height:100px; margin: 0 auto;" src="{{$chatDetails->image}}" alt="">
             </div>
-            <div  style="position:relative; top:35%">{{$chatDetails->name}}</div>
+            <div class="chat-profile-name" style="position:relative; left:87%;top:7%; 	transform: translate(-50%, -50%);">
+              <h2 style="color:white;">{{$chatDetails->name}}</h2>
+            </div>
+            <div class="chat-profile-name" style="position:relative; left:78%;top:3%; 	transform: translate(-50%, -50%);">
+              <h3 style="color:dimgray;">+31 6 12345678</h2>
+            </div>
+            <div class="icon-row" style="position:relative; left:74%;top:3%; 	transform: translate(-50%, -50%); display:flex;">
+              <div class="icon" style="padding-right:15px; padding-left:15px;">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                  </svg></div>
+              </div>
+              <div class="icon" style="padding-right:15px; padding-left:15px;">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
+                  </svg></div>
+              </div>
+              <div class="icon" style="padding-right:15px; padding-left:15px;cursor:pointer;"  onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
+                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                    <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                  </svg></div>
+              </div>
 
-            <div class="actions attachment">
-              <i class="zmdi zmdi-attachment-alt"></i>
             </div>
-            <div class="actions">
-              <i class="zmdi zmdi-phone"></i>
+            <div class="icon-row-label" style="position:relative; left:75%;top:3%; 	transform: translate(-50%, -50%); display:flex;">
+              <div class="icon" style="padding-right:8px; padding-left:8px; color:white; font-size:small;">
+                Audio
+              </div>
+              <div class="icon" style="padding-right:8px; padding-left:11px; color:white;font-size:small;">
+                Video
+              </div>
+              <div class="icon" style="padding-right:8px; padding-left:6px; color:white;font-size:small;cursor:pointer;"onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
+                Message
+              </div>
             </div>
+            <div style="background-color:white; height:10px; margin-top:20px;"></div>
+            <div class="chat-profile-name" style="margin-top:10px; padding-left:10px; padding-right:10px;">
+            <h3 style="color:white;">Description:</h3>
+
+              <h5 style="color:white;">{{$chatDetails->story}}</h5>
+</div>
           </div>
-          <div style="background-color: white; max-height:63%; " >
-<p style="background-color: #219473; margin-top:6px; color:white; padding-left:5px; padding-right:5px;">{{$chatDetails->story}}</p>
-          </div>
+
+
           @endforeach
-     
-    </div>
-  </div>
-  <div class="footer">
-    <div class="btn-burger"></div>
-    <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
-    <div class="btn-back" onclick="window.history.go(-1); return false;"></div>
-  </div>
-  </div>
-  <script>
-    function showTime() {
-      let date = new Date();
-      let h = date.getHours(); // 0 - 23
-      let m = date.getMinutes(); // 0 - 59
 
-      if (h == 0) {
-        h = 12;
+        </div>
+      </div>
+      <div class="footer">
+        <div class="btn-burger"></div>
+        <div onclick="window.location.href=`{{route('home')}}`;" class="btn-home"></div>
+        <div class="btn-back" onclick="window.history.go(-1); return false;"></div>
+      </div>
+    </div>
+    <script>
+      function showTime() {
+        let date = new Date();
+        let h = date.getHours(); // 0 - 23
+        let m = date.getMinutes(); // 0 - 59
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+
+        let time = h + ":" + m;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+
       }
 
-      h = (h < 10) ? "0" + h : h;
-      m = (m < 10) ? "0" + m : m;
-
-      let time = h + ":" + m;
-      document.getElementById("MyClockDisplay").innerText = time;
-      document.getElementById("MyClockDisplay").textContent = time;
-
-      setTimeout(showTime, 1000);
-
-    }
-
-    showTime();
-
-  </script>
+      showTime();
+    </script>
 
 </body>
 

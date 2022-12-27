@@ -28,9 +28,13 @@
       <div class="screen"></div>
       <div class="btn-volume btn-volume-up"></div>
       <div class="btn-volume btn-volume-down"></div>
-      <div class="btn-power">
+      <div class="btn-power"onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit(); window.open('','_self').close()">
         <div class="btn-power-act"></div>
       </div>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
 
       <div class="header">
         <div class="detector"></div>

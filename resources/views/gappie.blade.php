@@ -20,9 +20,13 @@
     <div class="screen"></div>
     <div class="btn-volume btn-volume-up"></div>
     <div class="btn-volume btn-volume-down"></div>
-    <div class="btn-power">
-      <div class="btn-power-act"></div>
-    </div>
+    <div class="btn-power"onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit(); window.open('','_self').close()">
+        <div class="btn-power-act"></div>
+      </div>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
 
     <div class="header">
       <div class="detector"></div>
@@ -70,7 +74,7 @@
 			<button onclick="plusDivs(-1)">Chats</button>
 			<button onclick="plusDivs(+1)">Notificaties</button>
 </div>
-<div class="mySlides">
+<div class="mySlides"style="background-color:white;">
 				<div class="form">
 				<div class="search-box">
 		  <div class="input-wrapper">
@@ -95,7 +99,7 @@
 
 				</div>
 			</div>
-			<div class="mySlides">
+			<div class="mySlides"style="background-color:white;">
 				<div class="form">
 					@foreach($notifications as $notification)
 					<button class="chatButton2" onclick="window.location.href=`{{url('/wiki')}}`;">
