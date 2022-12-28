@@ -56,7 +56,7 @@
 ">
               <img style="border-radius: 50%; height:100px; margin: 0 auto;" src="{{$chatDetails->image}}" alt="">
             </div>
-            <div class="chat-profile-name" style="position:relative; left:87%;top:7%; 	transform: translate(-50%, -50%);">
+            <div class="chat-profile-name" style="position:relative; left:93%;top:7%; 	transform: translate(-50%, -50%);">
               <h2 style="color:white;">{{$chatDetails->name}}</h2>
             </div>
             <div class="chat-profile-name" style="position:relative; left:78%;top:3%; 	transform: translate(-50%, -50%);">
