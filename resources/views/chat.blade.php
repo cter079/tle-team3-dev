@@ -100,7 +100,9 @@
           </div>
           <div class="form">
 
-
+          <div class="today" id="earlier" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+  <span>Earlier</span>
+</div>
 
             @foreach($chatContaints as $chat)
             @if($chat->direction == "received")
@@ -125,6 +127,11 @@
                 <p>{{$chat-> messages}}</p>
               </div>
             </div>
+            @if($chat->messages == "Hahaha we kunnen niet teveel praten toch")
+<div class="today" id="today" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+  <span>Today</span>
+</div>
+            @endif
 
             @endif
             @endforeach
@@ -133,8 +140,8 @@
           <div class="typing-field">
             <div class="input-data">
               <select id="data" class="selectOption" name="Select" required>
-                <option value="jaa">jaa</option>
-                <option value="neeman">neeman</option>
+                <option value="Ewa hoelaat">Ewa hoelaat</option>
+                <option value=""></option>
 
               </select>
               <input id="data2" type="hidden" value="{{$chat->chat_id}}">
@@ -162,6 +169,10 @@
 </body>
 <script>
   window.addEventListener("load", () => {
+    // automatically scroll to bottom of chat
+    const chat = document.querySelector(".form");
+    chat.scrollTop = chat.scrollHeight;
+
     let option1 = localStorage.getItem('{{$chatDetails->name}}')
     let option2 = localStorage.getItem('{{$chatDetails->name}} 2')
     let select = document.querySelector("#data");
@@ -181,6 +192,9 @@
         options[1].innerHTML = option2;
         options[1].value = option2;
       }
+    }
+    if (options[1].innerText == "") {
+      options[1].style.display = "none";
     }
   });
 
@@ -215,6 +229,10 @@
 
         let sentmsg = '<div class="user-inbox inbox"><div class="msg-header"><p>' + msg + '</p></div></div>';
         document.querySelector(".form").insertAdjacentHTML("beforeend", sentmsg);
+        const chat = document.querySelector(".form");
+
+        chat.scrollTop = chat.scrollHeight;
+
         let delay = Math.random() * 10000;
         let delay2 = 3000
 
@@ -244,14 +262,26 @@
                 document.querySelector(".form").insertAdjacentHTML("beforeend", replay);
                 document.getElementById('mySound').play();
                 i++
+                const chat = document.querySelector(".form");
+
+                chat.scrollTop = chat.scrollHeight;
+
                 createMessage()
               }, delay2);
             } else {
               sendOptions()
             }
           }
+function createToday(){
+if(body["replay"][0] == "👍"){
+  let previousDay= document.getElementById('today').innerHTML = '<span>Earlier</span>'
+  //change id of previous day to earlier
+  document.getElementById('today').id = `${body["replay"][0]}`
 
-
+  let todayMessage = '<div class="today" id="today" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);"><span>Today</span></div>'
+document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
+}
+}
 
 
           let select = document.querySelector("#data");
@@ -259,6 +289,8 @@
 
           function sendOptions() {
             sendNotification()
+            createToday()
+
             sendBtn.classList.toggle('hide');
             document.querySelector(".status").textContent = "online";
             for (let i = 0; i < select.length; i++) {
@@ -274,7 +306,6 @@
           }
 
           function sendNotification() {
-            console.log('kaas')
             setTimeout(function() {
               document.getElementById('mySound3').play();
 
