@@ -226,8 +226,11 @@ padding-top: 13px;
 	bottom: 1px;
 
 	
+	
 }
-
+.hide {
+	display: none;
+}
 .wrapper .typing-field .input-data {
     height: 40px;
     width: 335px;

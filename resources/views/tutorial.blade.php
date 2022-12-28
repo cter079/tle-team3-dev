@@ -58,7 +58,7 @@
 
 					<div class="articleRight">
 						<div class="articleRightInner">
-							<img src="https://techcrunch.com/wp-content/uploads/2013/04/burner-logo.png" alt="pencil" />
+							<img src="" alt="pencil" />
 						</div>
 						Dit is ons <a href="">logo</a>
 					</div>
