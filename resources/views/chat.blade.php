@@ -119,6 +119,8 @@
                 </p>
               </div>
             </div>
+            
+           
 
             @else
             <div class="user-inbox inbox">
@@ -127,13 +129,21 @@
                 <p>{{$chat-> messages}}</p>
               </div>
             </div>
+          
             @if($chat->messages == "Hahaha we kunnen niet teveel praten toch")
-<div class="today" id="today" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
-  <span>Today</span>
+<div class="today" id="{{$chat->messages}}" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+  <span>Earlier</span>
 </div>
+
             @endif
 
             @endif
+            @if($loop->last)
+            <div class="today" id="today" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+  <span>Today</span>
+</div>
+      
+@endif
             @endforeach
             @endforeach
           </div>
