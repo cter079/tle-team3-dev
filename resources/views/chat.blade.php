@@ -231,7 +231,6 @@
 
 createMessage()
 function createMessage(){
-  console.log(body["replay"].length)
 if(i < body["replay"].length){
           setTimeout (function(){
             document.querySelector(".status").textContent = "typing";
@@ -244,7 +243,6 @@ if(i < body["replay"].length){
         }
         else{
           sendOptions()
-          sendNotification()
         }
       }
 
@@ -255,6 +253,7 @@ if(i < body["replay"].length){
           let options = select.getElementsByTagName('option');
 
           function sendOptions(){
+            sendNotification()
           document.querySelector(".status").textContent = "online";
           for (let i = 0; i < select.length; i++) {
             
@@ -268,7 +267,9 @@ if(i < body["replay"].length){
             }
           }
         }
+
         function sendNotification(){
+          console.log('kaas')
           setTimeout(function() {
             document.getElementById('mySound3').play();
 
