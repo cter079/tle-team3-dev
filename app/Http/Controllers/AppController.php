@@ -72,8 +72,15 @@ class AppController extends Controller
                 ], ['chat_id', $chat_id]
             ])->get();
 
-
-        $replay = $data[0]["response"];
+if(isset($data[2]["response"])){
+        $replay =[ $data[0]['response'],$data[1]["response"],$data[2]["response"]];
+}
+elseif(isset($data[1]["response"])){
+        $replay =[ $data[0]['response'],$data[1]["response"]];
+}
+else{
+    $replay = [$data[0]['response']];
+}
         $id = $data[0]["id"];
         if ($replay == "Oké ik zie je straks") {
             $oldSaldo = User::select('saldo')->where('id', $account_id)->first();
@@ -112,7 +119,8 @@ class AppController extends Controller
         $chatSent->direction = "sent";
         $chatSent->messages = $message;
         $chatSent->save();
-
+//for loop for each response and save it in the database
+for ($i = 0; $i < count($data); $i++) {
 
         $chatReceived = new Messages();
 
@@ -120,9 +128,9 @@ class AppController extends Controller
         $chatReceived->account_id = $account_id;
         $chatReceived->chat_id = $chat_id;
         $chatReceived->direction = "received";
-        $chatReceived->messages = $data[0]["response"];
+        $chatReceived->messages = $data[$i]["response"];
         $chatReceived->save();
-       
+}
        
     }
 

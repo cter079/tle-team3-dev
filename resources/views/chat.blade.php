@@ -216,6 +216,7 @@
         document.querySelector(".form").insertAdjacentHTML("beforeend", sentmsg);
         let delay = Math.random() * 10000;
         let delay2 = 3000
+
         localStorage.setItem("{{$chatDetails->name}}", body["queries"][0]["response"])
         if(body["queries"][1] == undefined){
           localStorage.setItem("{{$chatDetails->name}} 2", "")
@@ -223,20 +224,38 @@
           localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
 
         }
-        document.querySelector(".status").textContent = "typing...";
-
 
         setTimeout(function() {
-          document.getElementById('mySound').play();
+          document.querySelector(".status").textContent = "typing";
+          let i = 0
 
-          let replay = '<div class="bot-inbox inbox"><div class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#219473" class="bi bi-triangle-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/></svg></div><div class="msg-header"><p><span style="color:#915c00; font-weight: bold;">{{$chatDetails->name}}</span><br>' + body["replay"] + '</p></div></div>';
+createMessage()
+function createMessage(){
+  console.log(body["replay"].length)
+if(i < body["replay"].length){
+          setTimeout (function(){
+            document.querySelector(".status").textContent = "typing";
+          let replay = '<div class="bot-inbox inbox"><div class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#219473" class="bi bi-triangle-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/></svg></div><div class="msg-header"><p><span style="color:#915c00; font-weight: bold;">{{$chatDetails->name}}</span><br>' + body["replay"][i] + '</p></div></div>';
           document.querySelector(".form").insertAdjacentHTML("beforeend", replay);
-          document.querySelector(".status").textContent = "online";
+          document.getElementById('mySound').play();
+          i++
+          createMessage()
+          }, delay2);
+        }
+        else{
+          sendOptions()
+          sendNotification()
+        }
+      }
 
+        
+  
 
           let select = document.querySelector("#data");
           let options = select.getElementsByTagName('option');
 
+          function sendOptions(){
+          document.querySelector(".status").textContent = "online";
           for (let i = 0; i < select.length; i++) {
             
             options[i].innerHTML = body["queries"][i]["response"];
@@ -248,6 +267,8 @@
               options[1].style.display = "block";
             }
           }
+        }
+        function sendNotification(){
           setTimeout(function() {
             document.getElementById('mySound3').play();
 
@@ -259,6 +280,7 @@
               document.querySelector("#notifyType").textContent = '';
             }, 2000);
           }, 5000);
+        }
         }, delay)
 
 

@@ -39,12 +39,12 @@
                     <center>
                     <div>
                             <h3>Changelog:</h3>
+                            <h4>28-12-2022:</h4>
+                            <p>- More messages!</p>
+                            <p>- Profile page for each contact</p>
                             <h4>19-12-2022:</h4>
                             <p>- Fixed Bankoe UI</p>
                             <p>- New logo</p>
-                            <h4>16-12-2022:</h4>
-                            <p>- Fixed login not working</p>
-                            <p>- Added new notifications</p>
                         </div>
                         <div class="icons3">
 
