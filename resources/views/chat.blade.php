@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat</title>
-  <link rel="shortcut icon" type="image/x-icon" href="<? asset('chatapp.png') ?>" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/BCTg8mZ/chatapp.png" />
 
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('app.css') }}">

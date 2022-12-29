@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gappie</title>
-  <link rel="shortcut icon" type="image/x-icon" href="chatapp.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/BCTg8mZ/chatapp.png" />
 
   <link rel="stylesheet" type="text/css" href="{{ asset('app.css') }}">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -61,10 +61,10 @@
 ">
               <img style="border-radius: 50%; height:100px; margin: 0 auto;" src="{{$chatDetails->image}}" alt="">
             </div>
-            <div class="chat-profile-name" style="position:relative; left:93%;top:7%; 	transform: translate(-50%, -50%);">
+            <div class="chat-profile-name" style="width:100%; text-align:center; margin-top:15px;">
               <h2 style="color:white;">{{$chatDetails->name}}</h2>
             </div>
-            <div class="chat-profile-name" style="position:relative; left:78%;top:3%; 	transform: translate(-50%, -50%);">
+            <div class="chat-profile-name" style="width:100%; text-align:center;">
               <h3 style="color:dimgray;">+31 6 12345678</h2>
             </div>
             <div class="icon-row" style="position:relative; left:74%;top:3%; 	transform: translate(-50%, -50%); display:flex;">

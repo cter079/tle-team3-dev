@@ -54,6 +54,7 @@
                 <i class="zmdi zmdi-arrow-left"></i>
               </div>
               <div class="name">
+				<img src="chatapp.png" style="width: 20px; border-radius:50%"/>
                 <span>Gappie</span>
               </div>
               <div class="actions">
@@ -75,7 +76,7 @@
 			<button onclick="plusDivs(+1)">Notificaties</button>
 </div>
 <div class="mySlides"style="background-color:white;">
-				<div class="form">
+				<div class="form" style="max-height: 465px;">
 				<div class="search-box">
 		  <div class="input-wrapper">
 			<input placeholder="Zoek hier" type="text">
