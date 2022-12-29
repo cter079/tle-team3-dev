@@ -65,7 +65,6 @@
 
                     <button class="bank-btn"><a href="withdraw"><img src="img/arrow-up.png" alt="withdraw button"></a>Opnemen</button>
 
-                    <button class="bank-btn"><a href="request"><img src="img/request-icon.png" alt="request button"></a>Verzoek</button>
 
                 </div>
 

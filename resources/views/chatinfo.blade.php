@@ -22,13 +22,13 @@
       <div class="screen"></div>
       <div class="btn-volume btn-volume-up"></div>
       <div class="btn-volume btn-volume-down"></div>
-      <div class="btn-power"onclick="event.preventDefault();
+      <div class="btn-power" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit(); window.open('','_self').close()">
         <div class="btn-power-act"></div>
       </div>
       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-          </form>
+        @csrf
+      </form>
 
       <div class="header">
         <div class="detector"></div>
@@ -52,6 +52,11 @@
           </div>
           @foreach($chats as $chatDetails)
           <div class="chat-profile" style="height:97%; background-color:#219473;">
+            <div class="" style="position:relative; top:5%; left:2%;">
+              <i class="zmdi zmdi-arrow-left" onclick="window.history.go(-1); return false;"><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                </svg></i>
+            </div>
             <div class="chat-profile-img" style="width: 100px;height: 100px; position:relative; left:50%;top:13%; 	transform: translate(-50%, -50%);
 ">
               <img style="border-radius: 50%; height:100px; margin: 0 auto;" src="{{$chatDetails->image}}" alt="">
@@ -73,7 +78,7 @@
                     <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
                   </svg></div>
               </div>
-              <div class="icon" style="padding-right:15px; padding-left:15px;cursor:pointer;"  onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
+              <div class="icon" style="padding-right:15px; padding-left:15px;cursor:pointer;" onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
                     <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                   </svg></div>
@@ -87,16 +92,16 @@
               <div class="icon" style="padding-right:8px; padding-left:11px; color:white;font-size:small;">
                 Video
               </div>
-              <div class="icon" style="padding-right:8px; padding-left:6px; color:white;font-size:small;cursor:pointer;"onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
+              <div class="icon" style="padding-right:8px; padding-left:6px; color:white;font-size:small;cursor:pointer;" onclick="window.location.href=`{{route('chat', $chatDetails->id)}}`;">
                 Message
               </div>
             </div>
             <div style="background-color:white; height:10px; margin-top:20px;"></div>
             <div class="chat-profile-name" style="margin-top:10px; padding-left:10px; padding-right:10px;">
-            <h3 style="color:white;">Description:</h3>
+              <h3 style="color:white;">Description:</h3>
 
               <h5 style="color:white;">{{$chatDetails->story}}</h5>
-</div>
+            </div>
           </div>
 
 

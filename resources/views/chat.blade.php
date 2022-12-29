@@ -100,7 +100,7 @@
           </div>
           <div class="form">
 
-          <div class="today" id="earlier" style="background-color:grey; border-radius:25%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+          <div class="today" id="earlier" style="background-color:lightsteelblue;padding:2px 2px 2px 2px; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
   <span>Earlier</span>
 </div>
 
@@ -131,7 +131,7 @@
             </div>
           
             @if($chat->messages == "Hahaha we kunnen niet teveel praten toch")
-<div class="today" id="{{$chat->messages}}" style="background-color:lightsteelblue; border-radius:20%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+<div class="today" id="{{$chat->messages}}" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center;padding:2px 2px 2px 2px; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);">
   <span>Earlier</span>
 </div>
 
@@ -139,7 +139,7 @@
 
             @endif
             @if($loop->last)
-            <div class="today" id="today" style="background-color:lightsteelblue; border-radius:20%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+            <div class="today" id="today" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center; padding:2px 2px 2px 2px;position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);">
   <span>Today</span>
 </div>
       
@@ -288,7 +288,7 @@ if(body["replay"][0] == "👍"){
   //change id of previous day to earlier
   document.getElementById('today').id = `${body["replay"][0]}`
 
-  let todayMessage = '<div class="today" id="today" style="background-color:lightsteelblue; border-radius:20%; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);"><span>Today</span></div>'
+  let todayMessage = '<div class="today" id="today" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);"><span>Today</span></div>'
 document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
 }
 }
