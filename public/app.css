@@ -110,7 +110,7 @@ body {
 	border-bottom: solid 2px white; 
 }
 .right-nav{
-	padding-left: 95px;
+	padding-left: 84px;
 	 padding-right:0px; 
 }
 
@@ -175,27 +175,53 @@ hr{
     margin-left: 10px;
 	margin-bottom: 5px;
 }
-.chatButton{
+.chatButton {
 	width: 100%;
 	border: none;
-	background-color: 	white;
-	box-shadow: 0px 5px 5px #33333335;
-height: 75px;
-display: inline-block;
-padding-top: 13px;
+	background-color: white;
+	height: 75px;
+	display: inline-block;
+	padding-left: 10px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+  }
+  
+  .chatButton:before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	right: 90%;
+	width: 100%;
+	height: 100%;
+	background-color: #219473;
+	border-radius: 50%;
+	z-index: -1;
+	transition: transform ease-in-out 0.5s;
+	transform: scale(0);
+  }
+  
+  .chatButton:hover {
+	box-shadow: none;
+	color: white;
+	transition: transform ease-in-out 0.5s;
+
+  }
+  
+  .chatButton:hover:before {
+transform: scale(5); 
 }
+
+
 .chatButton2{
 	width: 100%;
 	border: none;
 	background-color: 	white;
-	box-shadow: 0px 5px 5px #33333335;
 height: 100px;
 display: inline-block;
 padding-top: 13px;
 }
-.chatButton:hover{
-	background-color: rgb(210, 210, 210);
-}
+
 .form .inbox .msg-header p {
     color: #fff;
     background: #219473;
@@ -303,6 +329,8 @@ text-align: center;
 box-shadow: 0px 5px 5px #33333335;
 background: white;
 }
+
+
 .icons div:hover{
 	transform: scale(0.9);
 	
@@ -433,6 +461,12 @@ right: 4px;
 		background-position: 50%;
 
 		}
+		.icons2 :nth-child(3){
+			background-image: url(img/picca.png);
+			background-size: 40px;
+			background-position: 50%;
+	
+			}
 
 .screen2{
 	height: 100%;
@@ -1103,13 +1137,7 @@ span.user {
   }
   
   
-  
-  .search-box {
-	padding: 10px 13px;
-	max-width: 30%;
-	
-	
-  }
+
   @media screen and (max-width: 600px) {
 	.search-box{
 		display: none;

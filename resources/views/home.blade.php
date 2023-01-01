@@ -79,7 +79,7 @@
 
             <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/settings')}}`;">Settings</div>
             <div class="app" style="cursor:pointer"onclick="window.location.href=`{{route('tutorial')}}`;">Tutorial</div>
-            <div class="app" style="cursor:pointer"></div>
+            <div class="app" style="cursor:pointer">.Picca</div>
             <div class="app" style="cursor:pointer"></div>
 
           </div>
