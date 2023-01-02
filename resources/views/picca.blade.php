@@ -37,8 +37,6 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                            <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Storten</button>
-
                                 <img src="img/home.png" class="icon" alt="">
                                 <img src="img/messenger.png" class="icon" alt="">
                                 <img src="img/add.png" class="icon" alt="">
@@ -58,6 +56,8 @@
                                         <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                         <p class="username">Bilalvdb</p>
                                     </div>
+                                    <button class="bank-btn" style="width: 20px;"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Storten</button>
+
                                     <div class="status-card">
                                         <div class="profile-pic"><img src="img/cover 2.png" /></div>
                                         <p class="username">Keynai</p>
