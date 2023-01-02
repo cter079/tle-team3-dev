@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="picca.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/hRWqN7p/picca.png" />
 </head>
 
 <body>
@@ -86,7 +86,7 @@
                                             <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilalvdb</p>
                                         </div>
-                                        <img src="img/option.png" class="options" alt="">
+                                        <img src="img/option.PNG" class="options" alt="">
                                     </div>
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
@@ -117,7 +117,7 @@
                                             <div class="profile-pic"><img src="img/cover 6.png" /></div>
                                             <p class="username">Joeri_0547</p>
                                         </div>
-                                        <img src="img/option.png" class="options" alt="">
+                                        <img src="img/option.PNG" class="options" alt="">
                                     </div>
                                     <img src="img/cover 6.png" class="post-image" alt="">
                                     <div class="post-content">
@@ -148,7 +148,7 @@
                                             <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilal</p>
                                         </div>
-                                        <img src="img/option.png" class="options" alt="">
+                                        <img src="img/option.PNG" class="options" alt="">
                                     </div>
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
@@ -179,7 +179,7 @@
                                             <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilal</p>
                                         </div>
-                                        <img src="img/option.png" class="options" alt="">
+                                        <img src="img/option.PNG" class="options" alt="">
                                     </div>
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
