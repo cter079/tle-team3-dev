@@ -53,10 +53,9 @@
                             <div class="left-col">
                                 <div class="status-wrapper">
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/cover 1.png" /></div>
+                                        <div class="profile-pic"><img src=<?= asset('"img/cover 1.png"')?> /></div>
                                         <p class="username">Bilalvdb</p>
                                     </div>
-                                    <button class="bank-btn" style="width: 20px;"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Storten</button>
 
                                     <div class="status-card">
                                         <div class="profile-pic"><img src="img/cover 2.png" /></div>
