@@ -36,11 +36,11 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                                <img src="img/home.png" class="icon" alt="">
-                                <img src="img/messenger.png" class="icon" alt="">
-                                <img src="img/add.png" class="icon" alt="">
-                                <img src="img/explore.png" class="icon" alt="">
-                                <img src="img/like.png" class="icon" alt="">
+                                <img src="/img/home.png" class="icon" alt="">
+                                <img src="/img/messenger.png" class="icon" alt="">
+                                <img src="/img/add.png" class="icon" alt="">
+                                <img src="/img/explore.png" class="icon" alt="">
+                                <img src="/img/like.png" class="icon" alt="">
                                 <div class="icon user-profile"></div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                                         </div>
                                         <img src="img/option.png" class="options" alt="">
                                     </div>
-                                    <img src="img/img/cover 1.png" class="post-image" alt="">
+                                    <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
                                             <img src="img/like.png" class="icon" alt="">
