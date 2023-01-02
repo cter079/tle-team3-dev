@@ -104,7 +104,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/smile.png" class="icon">
+                                    <img src="img/smile.PNG" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -122,10 +122,10 @@
                                     <img src="img/cover 6.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/like.png" class="icon" alt="">
-                                            <img src="img/comment.png" class="icon" alt="">
-                                            <img src="img/send.png" class="icon" alt="">
-                                            <img src="img/save.png" class="save icon" alt="">
+                                        <img src="img/like.PNG" class="icon" alt="">
+                                            <img src="img/comment.PNG" class="icon" alt="">
+                                            <img src="img/send.PNG" class="icon" alt="">
+                                            <img src="img/save.PNG" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -135,7 +135,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/smile.png" class="icon">
+                                    <img src="img/smile.PNG" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -153,10 +153,10 @@
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/like.png" class="icon" alt="">
-                                            <img src="img/comment.png" class="icon" alt="">
-                                            <img src="img/send.png" class="icon" alt="">
-                                            <img src="img/save.png" class="save icon" alt="">
+                                        <img src="img/like.PNG" class="icon" alt="">
+                                            <img src="img/comment.PNG" class="icon" alt="">
+                                            <img src="img/send.PNG" class="icon" alt="">
+                                            <img src="img/save.PNG" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -166,7 +166,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/smile.png" class="icon">
+                                    <img src="img/smile.PNG" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -184,10 +184,10 @@
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/like.png" class="icon" alt="">
-                                            <img src="img/comment.png" class="icon" alt="">
-                                            <img src="img/send.png" class="icon" alt="">
-                                            <img src="img/save.png" class="save icon" alt="">
+                                        <img src="img/like.PNG" class="icon" alt="">
+                                            <img src="img/comment.PNG" class="icon" alt="">
+                                            <img src="img/send.PNG" class="icon" alt="">
+                                            <img src="img/save.PNG" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -197,7 +197,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/smile.png" class="icon">
+                                        <img src="img/smile.PNG" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
