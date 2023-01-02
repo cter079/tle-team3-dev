@@ -117,6 +117,10 @@ class bankoeController extends Controller
             return view('withdraw', ['saldo' => $saldo],['bank' => $bankSaldo],['error' => $error]);
         }
     }
+
+    function picca(){
+        return view('picca');
+    }
     }
 
 

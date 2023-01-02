@@ -48,6 +48,7 @@ Route::get('/request', function () {
 
   Route::post('/depositMoney', [App\Http\Controllers\BankoeController::class, 'depositMoney'])->name('depositMoney');
   Route::post('/withdrawMoney', [App\Http\Controllers\BankoeController::class, 'withdrawMoney'])->name('withdrawMoney');
+  Route::get('/picca', [App\Http\Controllers\BankoeController::class, 'picca'])->name('picca');
 
 
   Route::get('/gappie', [App\Http\Controllers\AppController::class, 'showChats'])->name('gappie');
