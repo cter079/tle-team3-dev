@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="picca.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/bankoe-favicon.png" />
+
 </head>
 
 <body>
@@ -36,11 +38,11 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                                <img src="/img/home.png" class="icon" alt="">
-                                <img src="/img/messenger.png" class="icon" alt="">
-                                <img src="/img/add.png" class="icon" alt="">
-                                <img src="/img/explore.png" class="icon" alt="">
-                                <img src="/img/like.png" class="icon" alt="">
+                                <img src="img/home.png" class="icon" alt="">
+                                <img src="img/messenger.png" class="icon" alt="">
+                                <img src="img/add.png" class="icon" alt="">
+                                <img src="img/explore.png" class="icon" alt="">
+                                <img src="img/like.png" class="icon" alt="">
                                 <div class="icon user-profile"></div>
                             </div>
                         </div>
