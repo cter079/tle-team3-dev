@@ -37,11 +37,11 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                                <img src="img/home.png" class="icon" alt="">
-                                <img src="img/messenger.png" class="icon" alt="">
-                                <img src="img/add.png" class="icon" alt="">
-                                <img src="img/explore.png" class="icon" alt="">
-                                <img src="img/like.png" class="icon" alt="">
+                                <img src="img/home.PNG" class="icon" alt="">
+                                <img src="img/messenger.PNG" class="icon" alt="">
+                                <img src="img/add.PNG" class="icon" alt="">
+                                <img src="img/explore.PNG" class="icon" alt="">
+                                <img src="img/like.PNG" class="icon" alt="">
                                 <div class="icon user-profile"></div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="left-col">
                                 <div class="status-wrapper">
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src=<?= asset('"img/cover 1.png"')?> /></div>
+                                        <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                         <p class="username">Bilalvdb</p>
                                     </div>
 
@@ -91,10 +91,10 @@
                                     <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/like.png" class="icon" alt="">
-                                            <img src="img/comment.png" class="icon" alt="">
-                                            <img src="img/send.png" class="icon" alt="">
-                                            <img src="img/save.png" class="save icon" alt="">
+                                            <img src="img/like.PNG" class="icon" alt="">
+                                            <img src="img/comment.PNG" class="icon" alt="">
+                                            <img src="img/send.PNG" class="icon" alt="">
+                                            <img src="img/save.PNG" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
