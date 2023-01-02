@@ -37,7 +37,9 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                                <img href="img/home.png" class="icon" alt="">
+                            <button class="bank-btn"><a href="deposit"><img src="img/arrow-down.png" alt="deposit button"></a>Storten</button>
+
+                                <img src="img/home.png" class="icon" alt="">
                                 <img src="img/messenger.png" class="icon" alt="">
                                 <img src="img/add.png" class="icon" alt="">
                                 <img src="img/explore.png" class="icon" alt="">
