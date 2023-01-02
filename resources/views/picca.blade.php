@@ -36,11 +36,11 @@
                         <div class="nav-wrapper">
                             <h1 class="brand-img">Picca</h1>
                             <div class="nav-items">
-                                <img src="img/img/home.png" class="icon" alt="">
-                                <img src="img/img/messenger.png" class="icon" alt="">
-                                <img src="img/img/add.png" class="icon" alt="">
-                                <img src="img/img/explore.png" class="icon" alt="">
-                                <img src="img/img/like.png" class="icon" alt="">
+                                <img src="img/home.png" class="icon" alt="">
+                                <img src="img/messenger.png" class="icon" alt="">
+                                <img src="img/add.png" class="icon" alt="">
+                                <img src="img/explore.png" class="icon" alt="">
+                                <img src="img/like.png" class="icon" alt="">
                                 <div class="icon user-profile"></div>
                             </div>
                         </div>
@@ -52,27 +52,27 @@
                             <div class="left-col">
                                 <div class="status-wrapper">
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 1.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                         <p class="username">Bilalvdb</p>
                                     </div>
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 2.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 2.png" /></div>
                                         <p class="username">Keynai</p>
                                     </div>
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 3.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 3.png" /></div>
                                         <p class="username">Ayoub</p>
                                     </div>
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 4.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 4.png" /></div>
                                         <p class="username">Yassin</p>
                                     </div>
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 5.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 5.png" /></div>
                                         <p class="username">Sem</p>
                                     </div>
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/img/cover 6.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 6.png" /></div>
                                         <p class="username">Joeri_0547</p>
                                     </div>
                                 
@@ -81,18 +81,18 @@
                                 <div class="post">
                                     <div class="info">
                                         <div class="user">
-                                            <div class="profile-pic"><img src="img/img/cover 1.png" /></div>
+                                            <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilalvdb</p>
                                         </div>
-                                        <img src="img/img/option.png" class="options" alt="">
+                                        <img src="img/option.png" class="options" alt="">
                                     </div>
-                                    <img src="img/img/cover 1.png" class="post-image" alt="">
+                                    <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/img/like.png" class="icon" alt="">
-                                            <img src="img/img/comment.png" class="icon" alt="">
-                                            <img src="img/img/send.png" class="icon" alt="">
-                                            <img src="img/img/save.png" class="save icon" alt="">
+                                            <img src="img/like.png" class="icon" alt="">
+                                            <img src="img/comment.png" class="icon" alt="">
+                                            <img src="img/send.png" class="icon" alt="">
+                                            <img src="img/save.png" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -102,7 +102,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/img/smile.png" class="icon">
+                                        <img src="img/smile.png" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -112,18 +112,18 @@
                                 <div class="post">
                                     <div class="info">
                                         <div class="user">
-                                            <div class="profile-pic"><img src="img/img/cover 6.png" /></div>
+                                            <div class="profile-pic"><img src="img/cover 6.png" /></div>
                                             <p class="username">Joeri_0547</p>
                                         </div>
-                                        <img src="img/img/option.png" class="options" alt="">
+                                        <img src="img/option.png" class="options" alt="">
                                     </div>
-                                    <img src="img/img/cover 6.png" class="post-image" alt="">
+                                    <img src="img/cover 6.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/img/like.png" class="icon" alt="">
-                                            <img src="img/img/comment.png" class="icon" alt="">
-                                            <img src="img/img/send.png" class="icon" alt="">
-                                            <img src="img/img/save.png" class="save icon" alt="">
+                                            <img src="img/like.png" class="icon" alt="">
+                                            <img src="img/comment.png" class="icon" alt="">
+                                            <img src="img/send.png" class="icon" alt="">
+                                            <img src="img/save.png" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -133,7 +133,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/img/smile.png" class="icon">
+                                        <img src="img/smile.png" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -143,18 +143,18 @@
                                 <div class="post">
                                     <div class="info">
                                         <div class="user">
-                                            <div class="profile-pic"><img src="img/img/cover 1.png" /></div>
+                                            <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilal</p>
                                         </div>
-                                        <img src="img/img/option.png" class="options" alt="">
+                                        <img src="img/option.png" class="options" alt="">
                                     </div>
-                                    <img src="img/img/cover 1.png" class="post-image" alt="">
+                                    <img src="img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/img/like.png" class="icon" alt="">
-                                            <img src="img/img/comment.png" class="icon" alt="">
-                                            <img src="img/img/send.png" class="icon" alt="">
-                                            <img src="img/img/save.png" class="save icon" alt="">
+                                            <img src="img/like.png" class="icon" alt="">
+                                            <img src="img/comment.png" class="icon" alt="">
+                                            <img src="img/send.png" class="icon" alt="">
+                                            <img src="img/save.png" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -164,7 +164,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/img/smile.png" class="icon">
+                                        <img src="img/smile.png" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
@@ -174,18 +174,18 @@
                                 <div class="post">
                                     <div class="info">
                                         <div class="user">
-                                            <div class="profile-pic"><img src="img/img/cover 1.png" /></div>
+                                            <div class="profile-pic"><img src="img/cover 1.png" /></div>
                                             <p class="username">Bilal</p>
                                         </div>
-                                        <img src="img/img/option.png" class="options" alt="">
+                                        <img src="img/option.png" class="options" alt="">
                                     </div>
                                     <img src="img/img/cover 1.png" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
-                                            <img src="img/img/like.png" class="icon" alt="">
-                                            <img src="img/img/comment.png" class="icon" alt="">
-                                            <img src="img/img/send.png" class="icon" alt="">
-                                            <img src="img/img/save.png" class="save icon" alt="">
+                                            <img src="img/like.png" class="icon" alt="">
+                                            <img src="img/comment.png" class="icon" alt="">
+                                            <img src="img/send.png" class="icon" alt="">
+                                            <img src="img/save.png" class="save icon" alt="">
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
@@ -195,7 +195,7 @@
                                         <p class="post-time">2 hours ago</p>
                                     </div>
                                     <div class="comment-wrapper">
-                                        <img src="img/img/smile.png" class="icon">
+                                        <img src="img/smile.png" class="icon">
                                         <input type="text" class="comment-box" placeholder="Add a comment">
                                         <button class="comment-btn">post</button>
 
