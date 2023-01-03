@@ -53,7 +53,7 @@
                             <div class="left-col">
                                 <div class="status-wrapper">
                                     <div class="status-card">
-                                        <div class="profile-pic"><img src="img/cover 1.png" /></div>
+                                        <div class="profile-pic"><img src="img/cover 1.jpg" /></div>
                                         <p class="username">Bilalvdb</p>
                                     </div>
 
@@ -83,12 +83,12 @@
                                 <div class="post">
                                     <div class="info">
                                         <div class="user">
-                                            <div class="profile-pic"><img src="img/cover 1.png" /></div>
+                                            <div class="profile-pic"><img src="img/cover 1.jpg" /></div>
                                             <p class="username">Bilalvdb</p>
                                         </div>
                                         <img src="img/option.PNG" class="options" alt="">
                                     </div>
-                                    <img src="img/cover 1.png" class="post-image" alt="">
+                                    <img src="img/cover 1.jpg" class="post-image" alt="">
                                     <div class="post-content">
                                         <div class="reaction-wrapper">
                                             <img src="img/like.PNG" class="icon" alt="">
@@ -96,9 +96,9 @@
                                             <img src="img/send.PNG" class="icon" alt="">
                                             <img src="img/save.PNG" class="save icon" alt="">
                                         </div>
-                                        <p class="likes">100 likes</p>
+                                        <p class="likes">62 likes</p>
                                         <p class="description">
-                                            <span>Bilalvdb</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                                            <span>Bilalvdb</span> Money on my mind💸💸
 
                                         </p>
                                         <p class="post-time">2 hours ago</p>
@@ -129,7 +129,7 @@
                                         </div>
                                         <p class="likes">100 likes</p>
                                         <p class="description">
-                                            <span>Joeri_0546</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                                            <span>Joeri_0546</span>Leven  doen we zo 🤪
 
                                         </p>
                                         <p class="post-time">2 hours ago</p>

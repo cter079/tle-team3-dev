@@ -54,11 +54,11 @@
 				<div class="article">
 					<h1>BurnerPhone</h1>
 					<p class="siteSub">Van TLE Team 3</p>
-					<p class="roleNote">Dit artikel gaat over hoe je onze game speelt</p>
+					<p class="roleNote">Dit artikel gaat over hoe onze game werkt</p>
 
 					<div class="articleRight">
 						<div class="articleRightInner">
-							<img src="" alt="pencil" />
+							<img src="img/burnerphone.png" alt="pencil" />
 						</div>
 						Dit is ons <a href="">logo</a>
 					</div>
@@ -67,50 +67,11 @@
 					<p>Het doel van onze game is simpel: Wij willen professionals die in contact komen met jeugdcriminelen meer inlevingsvermogen geven door deze game voor hen te ontwikkelen.</p>
 					<p>In deze game krijg je notificaties zoals je net hebt gekregen. Deze beschrijven exact wat de gevolgen zijn van de door jou gekozen chatbericht in Gappie. Naast deze chatapp is er ook een bankieren app: 'Bankoe'. Deze app houdt jouw saldo bij en schrijft automatisch geld af nadat jij in de chatapp bijvoorbeeld aangeeft dat je naar een feestje gaat. Hiervan krijg je ook een notificatie.</p>
                     <p>Voor je begint met chatten is het belangrijk om de achtergrondinformatie van de personage waarmee je wilt chatten te lezen. Zo ken je hem/haar beter en dat kan positieve invloed hebben op de manier waarop jij antwoordt. Staat jouw saldo op nul? Dan is het game over. Er zijn verder nog meerdere manieren om 'game over' te gaan, maar dat houden wij liever geheim. Wil je opnieuw spelen? Klik vanaf het homescherm op de settings en daar staat een knop. Veel speelplezier!</p>
-					<div class="contentsPanel">
-						<div class="contentsHeader">Contents</div>
-						<ul>
-							<li>
-								<span>1</span><a href="#">History</a>
-								<ul>
-									<li><span>1.1</span><a href="#">Camel's hair pencil</a> </li>
-									<li><span>1.2</span><a href="#">Discovery of graphite deposit</a> </li>
-									<li><span>1.3</span><a href="#">Wood holders added </a></li>
-									<li><span>1.4</span><a href="#">The pencil in America </a></li>
-									<li><span>1.5</span><a href="#">Eraser attached </a></li>							
-									<li><span>1.6</span><a href="#">Marking material </a></li>							
-									<li><span>1.7</span><a href="#">Pencil extenders </a></li>							
-								</ul>
-							</li>
-							<li><span>2</span><a href="#">Health</a></li>
-							<li><span>3</span><a href="#">Manufacture</a></li>
-							<li><span>4</span><a href="#">Grading and classification</a></li>
-						</ul>
-					</div>
-					 eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
-					<h2>Sed rebum regione suscipit</h2>
-					<p>Ea duo atqui incorrupte, sed rebum regione suscipit ex, mea ex dicant percipit referrentur. Dicat luptatum constituam vix ut. His vide platonem omittantur id, vel quis vocent an. Ad pro inani zril omnesque. Mollis forensibus sea an, vim habeo adipisci contentiones ad, tale autem graecis ne sit.</p>
 					
-					<div class="lavenderBox">
-						<div class="header">Panel title</div>
-						<div class="subtitle linklist"><a href="#">Lorem</a> <a href="#">Ipsum</a> <a href="#">Dolorestitas</a> </div>
-						<div class="linklist">
-							<a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a> <a href="#">Inani zril  </a> <a href="#">Forensibus sea </a> <a href="#">Habeo adipisci </a> <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a><a href="#">Percipit </a> <a href="#">Mnesarchum </a> <a href="#">Molestie </a> <a href="#">Phaedrum </a> <a href="#">Luptatum constituam </a> <a href="#">Habeo adipisci </a> <a href="#">Inani zril  </a> <a href="#">Vel nisl albucius </a> <a href="#">Habeo adipisci </a> <a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Percipit maiestatis </a> <a href="#">Regione suscipit </a> <a href="#">Percipit maiestatis </a>
-						</div>
-						
-						<div class="subtitle">Subtitle</div>
-					</div>
 					
-					<div class="categories">
-						<a href="#">Minimum corrumpit </a> <a href="#">Regione suscipit </a> <a href="#">Has et partem </a>
-					</div>
-					
-				</div>
 				<div class="pagefooter">
-					This page was last edited on 29.07.2017 | Template by <a href="http://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a> <!-- Please leave this link unchanged -->
-					<div class="footerlinks">
-						<a href="#">Privacy policy</a> <a href="#">About</a> <a href="#">Terms and conditions</a> <a href="#">Cookie statement</a> <a href="#">Developers</a>
-					</div>
+					This page was last edited on 03.01.2023
+
 				</div>
 			
 			

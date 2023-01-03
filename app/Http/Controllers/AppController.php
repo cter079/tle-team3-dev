@@ -67,8 +67,8 @@ class AppController extends Controller
             ->where([
                 [
                     'query',
-                    'LIKE',
-                    '%' . $message . '%'
+                    '=',
+                 $message
                 ], ['chat_id', $chat_id]
             ])->get();
 
