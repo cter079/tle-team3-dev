@@ -76,10 +76,28 @@
 			<button onclick="plusDivs(+1)"style="font-weight: bold;">Notificaties</button>
 </div>
 <div class="mySlides"style="background-color:white; height:465px;">
-				<div class="form" style="max-height: 465px; padding:0px; padding-top:10px;">
+				<div class="form" id="chats" style="max-height: 465px; padding:0px; padding-top:10px;">
 				
 					@foreach($chats as $chat)
-					<button class="chatButton" onclick=`${window.location.href="{{ route ('chat', $chat->id)}}"}`>
+					@if($chat->id == 2)
+					<script>if(localStorage.getItem('2') == null){
+					}
+					else{
+
+            let newChat = `<button id="kaas" class="chatButton"><div class="friend-drawer friend-drawer--onhover"><img class="profile-image" src="{{$chat->image}}" alt="" style="margin-top:5px;"><div class="text" style="position: relative; padding-left:20%; text-align:left;padding-bottom:3px;"><h4><strong>{{$chat->name}}</strong></h4>	<p class="text-muted">{{$chat->description}}</p></div></div></button>`;
+			document.querySelector("#chats").insertAdjacentHTML("beforeend", newChat);
+			document.getElementById("kaas").setAttribute("onclick", "window.location.href=`{{ route ('chat', $chat->id)}}`");
+			if(localStorage.getItem('{{$chat->name}} 3') == 'false'){
+				let noti = document.createElement("div");
+				noti.setAttribute("class", "noti");
+
+
+			document.getElementById("kaas").appendChild(noti);
+			}
+					}</script>
+					@else
+					
+					<button class="chatButton" id="{{$chat->name}}"onclick=`${window.location.href="{{ route ('chat', $chat->id)}}"}`>
 						<div class=" friend-drawer friend-drawer--onhover">
 							<img class="profile-image" onclick="window.location.href=`{{ route ('chatinfo', $chat->id)}}`" src="{{$chat->image}}" alt="" style="margin-top:5px;">
 							<div class="text" style="position: relative; padding-left:20%; text-align:left;padding-bottom:3px;">
@@ -87,9 +105,18 @@
 								<p class="text-muted">{{$chat->description}}</p>
 							</div>
 						</div>
-
+<script>
+						if(localStorage.getItem('{{$chat->name}} 3') == 'false'){
+							console.log("{{$chat->name}}");
+							let noti = document.createElement("div");
+							noti.setAttribute("class", "noti");
+							noti.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="white" class="bi bi-bell-fill" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/></svg>'
+							document.querySelector("#{{$chat->name}}").appendChild(noti);
+						}
+					</script>
 					</button>
 					
+					@endif
 					@endforeach
 
 

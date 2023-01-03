@@ -1125,6 +1125,20 @@ span.user {
 .linklist a {
 	white-space: nowrap;
 }
+
+.noti{
+	z-index: 10;
+	position: absolute;
+	left: 90%;
+	bottom: 35%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color:#219473;
+}
 .categories {
 	border: 1px solid #a2a9b1;
 	background-color: #f8f9fa;

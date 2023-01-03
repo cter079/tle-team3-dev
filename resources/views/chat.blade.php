@@ -150,7 +150,7 @@
           <div class="typing-field">
             <div class="input-data">
               <select id="data" class="selectOption" name="Select" required>
-                <option value="Ewa hoelaat">Ewa hoelaat</option>
+                <option value="Faka">Faka</option>
                 <option value=""></option>
 
               </select>
@@ -233,7 +233,8 @@
           name: name,
         })
       }).then(async function(data) {
-        
+        localStorage.setItem("{{$chatDetails->name}} 3", 'false');
+
         let body = await data.json()
         document.getElementById('mySound2').play();
 
@@ -255,7 +256,11 @@
         }
         let sendBtn = document.querySelector("#send-btn");
         sendBtn.classList.toggle('hide');
+        if(body["replay"][0] == "Yo Nassim kom naar de kantine ik ben met een paar boys"){
+ localStorage.setItem("2", "ja")
+ localStorage.setItem("Keynai 3", 'false');
 
+}
 
 
         setTimeout(function() {
@@ -275,6 +280,7 @@
                 const chat = document.querySelector(".form");
 
                 chat.scrollTop = chat.scrollHeight;
+                localStorage.setItem("{{$chatDetails->name}} 3", 'false');
 
                 createMessage()
               }, delay2);
@@ -316,6 +322,8 @@ document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
           }
 
           function sendNotification() {
+            if(body['notification']!== undefined){
+
             setTimeout(function() {
               document.getElementById('mySound3').play();
 
@@ -328,6 +336,7 @@ document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
               }, 2000);
             }, 5000);
           }
+        }
         }, delay)
 
 

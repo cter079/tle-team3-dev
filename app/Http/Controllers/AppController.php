@@ -92,21 +92,38 @@ else{
             $notification->account_id = $account_id;
             $notification->save();
         }
-        else{
-            $notification = new Notifications();
+if($data[0]["response"] == "Yo Nassim kom naar de kantine ik ben met een paar boys"){
 
-            $notification->message = "Goed geantwoord! Dit is hoe jongeren met elkaar communiceren";
+    $notification = new Notifications();
+            $notification->message = "Je hebt een nieuwe mattie in je contactenlijst";
             $notification->account_id = $account_id;
             $notification->save();
-        }
+            $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+}
+        
+        // else{
+        //     $notification = new Notifications();
 
-        $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+        //     $notification->message = "Goed geantwoord! Dit is hoe jongeren met elkaar communiceren";
+        //     $notification->account_id = $account_id;
+        //     $notification->save();
+        //     $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+
+        // }
+        
+    
+
 
         $this->storeMessage($message, $chat_id, $account_id, $data, $name, $replay);
 
         $queries = Responses::select("response")
             ->where('query_id', $id)->get();
+            if(isset($notification)){
         return json_encode(["replay" => $replay, "queries" => $queries, "notification" => $notification['message']]);
+            }
+            else {
+                return json_encode(["replay" => $replay, "queries" => $queries]);
+            }
     }
 
     public function storeMessage($message, $chat_id, $account_id, $data, $name, $replay)
