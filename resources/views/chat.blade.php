@@ -100,9 +100,9 @@
           </div>
           <div class="form">
 
-          <div class="today" id="earlier" style="background-color:lightsteelblue;padding:2px 2px 2px 2px; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
-  <span>Earlier</span>
-</div>
+            <div class="today" id="earlier" style="background-color:lightsteelblue;padding:2px 2px 2px 2px; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;transform: translate(-50%, 0);">
+              <span>Earlier</span>
+            </div>
 
             @foreach($chatContaints as $chat)
             @if($chat->direction == "received")
@@ -119,8 +119,8 @@
                 </p>
               </div>
             </div>
-            
-           
+
+
 
             @else
             <div class="user-inbox inbox">
@@ -129,21 +129,21 @@
                 <p>{{$chat-> messages}}</p>
               </div>
             </div>
-          
+
             @if($chat->messages == "Hahaha we kunnen niet teveel praten toch")
-<div class="today" id="{{$chat->messages}}" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center;padding:2px 2px 2px 2px; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);">
-  <span>Earlier</span>
-</div>
+            <div class="today" id="{{$chat->messages}}" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center;padding:2px 2px 2px 2px; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);">
+              <span>Earlier</span>
+            </div>
 
             @endif
 
             @endif
             @if($loop->last)
             <div class="today" id="today" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center; padding:2px 2px 2px 2px;position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);">
-  <span>Today</span>
-</div>
-      
-@endif
+              <span>Today</span>
+            </div>
+
+            @endif
             @endforeach
             @endforeach
           </div>
@@ -188,7 +188,7 @@
     let select = document.querySelector("#data");
     let options = select.getElementsByTagName('option');
     if (option1 == null) {
-   
+
     } else {
       if (option2 == "") {
         options[1].style.display = "none";
@@ -254,14 +254,14 @@
           localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
 
         }
-        
+
         let sendBtn = document.querySelector("#send-btn");
         sendBtn.classList.toggle('hide');
-        if(body["replay"][0] == "Yo Nassim kom naar de kantine ik ben met een paar boys"){
- localStorage.setItem("2", "ja")
- localStorage.setItem("Keynai 3", 'false');
+        if (body["replay"][0] == "Yo Nassim kom naar de kantine ik ben met een paar boys") {
+          localStorage.setItem("2", "ja")
+          localStorage.setItem("Keynai 3", 'false');
 
-}
+        }
 
 
         setTimeout(function() {
@@ -289,16 +289,17 @@
               sendOptions()
             }
           }
-function createToday(){
-if(body["replay"][0] == "👍"){
-  let previousDay= document.getElementById('today').innerHTML = '<span>Earlier</span>'
-  //change id of previous day to earlier
-  document.getElementById('today').id = `${body["replay"][0]}`
 
-  let todayMessage = '<div class="today" id="today" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);"><span>Today</span></div>'
-document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
-}
-}
+          function createToday() {
+            if (body["replay"][0] == "👍") {
+              let previousDay = document.getElementById('today').innerHTML = '<span>Earlier</span>'
+              //change id of previous day to earlier
+              document.getElementById('today').id = `${body["replay"][0]}`
+
+              let todayMessage = '<div class="today" id="today" style="background-color:lightsteelblue; border-radius:25px; width:50px; text-align:center; position:relative;left:50%; margin-bottom:10px;margin-top:10px;transform: translate(-50%, 0);"><span>Today</span></div>'
+              document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
+            }
+          }
 
 
           let select = document.querySelector("#data");
@@ -323,21 +324,21 @@ document.querySelector(".form").insertAdjacentHTML("beforeend", todayMessage);
           }
 
           function sendNotification() {
-            if(body['notification']!== undefined){
-
-            setTimeout(function() {
-              document.getElementById('mySound3').play();
-
-              document.querySelector(".notify").classList.toggle("active");
-              document.querySelector("#notifyType").textContent = body['notification'];
+            if (body['notification'] !== undefined) {
 
               setTimeout(function() {
-                document.querySelector(".notify").classList.remove("active");
-                document.querySelector("#notifyType").textContent = '';
-              }, 2000);
-            }, 5000);
+                document.getElementById('mySound3').play();
+
+                document.querySelector(".notify").classList.toggle("active");
+                document.querySelector("#notifyType").textContent = body['notification'];
+
+                setTimeout(function() {
+                  document.querySelector(".notify").classList.remove("active");
+                  document.querySelector("#notifyType").textContent = '';
+                }, 2000);
+              }, 5000);
+            }
           }
-        }
         }, delay)
 
 
