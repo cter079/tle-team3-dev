@@ -188,7 +188,7 @@
     let select = document.querySelector("#data");
     let options = select.getElementsByTagName('option');
     if (option1 == null) {
-
+   
     } else {
       if (option2 == "") {
         options[1].style.display = "none";
@@ -254,6 +254,7 @@
           localStorage.setItem("{{$chatDetails->name}} 2", body["queries"][1]["response"])
 
         }
+        
         let sendBtn = document.querySelector("#send-btn");
         sendBtn.classList.toggle('hide');
         if(body["replay"][0] == "Yo Nassim kom naar de kantine ik ben met een paar boys"){

@@ -72,6 +72,8 @@ class AppController extends Controller
                 ], ['chat_id', $chat_id]
             ])->get();
 
+        
+           
 if(isset($data[2]["response"])){
         $replay =[ $data[0]['response'],$data[1]["response"],$data[2]["response"]];
 }
@@ -92,13 +94,25 @@ else{
             $notification->account_id = $account_id;
             $notification->save();
         }
-if($data[0]["response"] == "Yo Nassim kom naar de kantine ik ben met een paar boys"){
+if($message == "Oke k kom zo"){
 
     $notification = new Notifications();
             $notification->message = "Je hebt een nieuwe mattie in je contactenlijst";
             $notification->account_id = $account_id;
             $notification->save();
             $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+            $data2 = Query::select("*")->where([['query', '=',$message], ['chat_id', 2]])->get();
+//check if data2 is not null
+if(isset($data2[0]["response"])){
+    
+$chatid = 2;
+$name2 ='Keynai';
+$replay2 =$data2[0]['response'];
+
+$this->storeMessage2($chatid, $account_id, $data2, $name2, $replay2);
+}
+
+
 }
         
         // else{
@@ -146,6 +160,22 @@ for ($i = 0; $i < count($data); $i++) {
         $chatReceived->chat_id = $chat_id;
         $chatReceived->direction = "received";
         $chatReceived->messages = $data[$i]["response"];
+        $chatReceived->save();
+}
+       
+    }
+    public function storeMessage2($chatid, $account_id, $data2, $name2, $replay2)
+    {
+       
+for ($i = 0; $i < count($data2); $i++) {
+
+        $chatReceived = new Messages();
+
+        $chatReceived->name = $name2;
+        $chatReceived->account_id = $account_id;
+        $chatReceived->chat_id = $chatid;
+        $chatReceived->direction = "received";
+        $chatReceived->messages = $data2[$i]["response"];
         $chatReceived->save();
 }
        
