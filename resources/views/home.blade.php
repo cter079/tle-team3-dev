@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
   <div class="wrapper">
     <div class="device">
       <div class="screen"></div>
@@ -105,6 +106,8 @@
     </div>
 </body>
 <script>
+  localStorage.setItem("Bilal 3", 'false');
+
   function showTime() {
     let date = new Date();
     let h = date.getHours(); // 0 - 23

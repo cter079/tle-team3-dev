@@ -128,13 +128,16 @@
 					</div>
 					<div class="mySlides" style="background-color:white;">
 						<div class="form">
+							<p id="error">notificaties worden hier ingeladen.</p>
 							@foreach($notifications as $notification)
+							@if($notification!=null)
+							<script>document.querySelector('#error').classList.toggle('hide')</script>
 							<button class="chatButton2" onclick="window.location.href=`{{url('/wiki')}}`;">
 								<img class="profile-image" src="https://www.freeiconspng.com/uploads/status-warning-icon-png-29.png" alt="">
 								<p style="cursor:pointer">{{$notification->message}}</p>
 							</button>
 							<hr>
-
+@endif
 							@endforeach
 						</div>
 					</div>
