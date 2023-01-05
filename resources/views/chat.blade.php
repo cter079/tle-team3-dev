@@ -257,7 +257,8 @@
 
         let sendBtn = document.querySelector("#send-btn");
         sendBtn.classList.toggle('hide');
-        if (msg == "Oke k kom zo") {
+        if (body["replay"][0] == "Yo Nassim kom naar de kantine ik ben met een paar boys") {
+          console.log('kaas')
           localStorage.setItem("2", "ja");
           localStorage.setItem("Keynai 3", 'false');
 

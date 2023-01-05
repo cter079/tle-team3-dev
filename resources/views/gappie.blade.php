@@ -83,7 +83,7 @@
 							@foreach($chats as $chat)
 							@if($chat->id == 2)
 							<script>
-								if (localStorage.getItem('2') == null) {} else {
+								if (localStorage.getItem('2') == 'nee') {} else {
 
 									let newChat = `<button id="kaas" class="chatButton"><div class="friend-drawer friend-drawer--onhover"><img class="profile-image" src="{{$chat->image}}" alt="" style="margin-top:5px;"><div class="text" style="position: relative; padding-left:20%; text-align:left;padding-bottom:3px;"><h4><strong>{{$chat->name}}</strong></h4>	<p class="text-muted">{{$chat->description}}</p></div></div></button>`;
 									document.querySelector("#chats").insertAdjacentHTML("beforeend", newChat);
