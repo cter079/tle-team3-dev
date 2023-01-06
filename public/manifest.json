@@ -38,7 +38,12 @@
         "sizes": "44x44"
       },
       {
-        "src": "/favicon.ico",
+        "src": "img/burnerphoneicon.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "img/burnerphoneicon.png",
         "type": "image/x-icon"
       }
     ],
