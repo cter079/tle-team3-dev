@@ -181,12 +181,18 @@
 
 </body>
 <script>
-let pageLoaded = false;
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+  registration.addEventListener('updatefound', function() {
+    // A new service worker is available, so trigger a page refresh
+    window.location.reload();
+  });
+});
 
-if (!pageLoaded) {
-  window.location.reload(true);
-  pageLoaded = true;
-}
+self.addEventListener('install', function(event) {
+  // Force the new service worker to take control of the page immediately
+  event.waitUntil(self.skipWaiting());
+});
+
   window.addEventListener("load", () => {
     // automatically scroll to bottom of chat
     const chat = document.querySelector(".form");
