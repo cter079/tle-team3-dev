@@ -3,10 +3,10 @@
     "description": "In deze serious game leer je hoe het is om in de schoenen van een crimineel te staan. Appgesprekken van een crimineel tussen de 12 en 21 jaar worden gesimuleerd en het is aan jou de taak om op de juiste manier te antwoorden.",
     "dir": "ltr",
     "display": "standalone",
-    "name": "burnerphone",
+    "name": "Burnerphone",
     "orientation": "natural",
     "scope": "/",
-    "short_name": "burnerphone",
+    "short_name": "Burnerphone",
     "start_url": "/",
     "theme_color": "#ffffff",
     "categories": [
