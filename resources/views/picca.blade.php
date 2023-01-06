@@ -31,6 +31,15 @@
             </div>
 
             <div class="display">
+            <div id="loading">
+  <img id="loading-image" src="img/picca.png" alt="Loading..." />
+  <h1>Picca</h1>
+</div>
+<script>
+    window.addEventListener('load', function() {
+        document.getElementById('loading').classList.toggle('hidden2') ;
+    });
+</script>
                 <div class="form">
 
                     <nav class="navbar">
