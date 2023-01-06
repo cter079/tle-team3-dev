@@ -180,6 +180,19 @@
 
 </body>
 <script>
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+  reg.addEventListener('updatefound', () => {
+
+    const newSW = reg.installing;
+    newSW.addEventListener('statechange', () => {
+
+      // Check service worker state
+      if (newSW.state === 'installed') {
+         
+         }
+       });
+      });
+    });
   window.addEventListener("load", () => {
     // automatically scroll to bottom of chat
     const chat = document.querySelector(".form");
