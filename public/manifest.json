@@ -28,6 +28,16 @@
         "sizes": "1080x1080"
       },
       {
+        "src": "img/burnerphoneicon.png",
+        "type": "image/png",
+        "sizes": "150x150"
+      },
+      {
+        "src": "img/burnerphoneicon.png",
+        "type": "image/png",
+        "sizes": "44x44"
+      },
+      {
         "src": "/favicon.ico",
         "type": "image/x-icon"
       }
