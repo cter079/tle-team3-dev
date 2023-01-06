@@ -23,6 +23,14 @@
             console.log("Service worker has been registered for scope: " + reg.scope);
         });
     }
+    if ('serviceWorker' in navigator && 'PushManager' in window) {
+    Notification.requestPermission().then(function(permission) {
+        // If the user grants permission, subscribe the user to push notifications
+        if (permission === 'granted') {
+            subscribeUserToPush();
+        }
+    });
+}
 </script>
 
     <!-- Scripts -->
