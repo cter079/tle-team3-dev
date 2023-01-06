@@ -11,7 +11,9 @@
 
     <!-- Fonts -->
     <link rel="shortcut icon" type="image/x-icon" href="img/burnerphoneicon.png" />
-
+    <meta name="theme-color" content="#6777ef"/>
+<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
