@@ -159,6 +159,12 @@
 			</div>
 		</div>
 		<script>
+			  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+  registration.addEventListener('updatefound', function() {
+    // A new service worker is available, so trigger a page refresh
+    window.location.reload();
+  });
+});
 			function showTime() {
 				let date = new Date();
 				let h = date.getHours(); // 0 - 23
