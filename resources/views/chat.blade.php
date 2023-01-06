@@ -181,8 +181,12 @@
 
 </body>
 <script>
-  window.location.reload(true);
+let pageLoaded = false;
 
+if (!pageLoaded) {
+  window.location.reload(true);
+  pageLoaded = true;
+}
   window.addEventListener("load", () => {
     // automatically scroll to bottom of chat
     const chat = document.querySelector(".form");
