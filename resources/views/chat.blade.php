@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('app.css') }}">
+  <meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Pragma" content="no-cache" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
   <audio id="mySound" src="<?= asset('audio/notification.mp3') ?>"></audio>
