@@ -9,8 +9,9 @@
 
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('app.css') }}">
-  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
   <audio id="mySound" src="<?= asset('audio/notification.mp3') ?>"></audio>
@@ -180,19 +181,7 @@
 
 </body>
 <script>
-  navigator.serviceWorker.register('/sw.js').then(reg => {
-  reg.addEventListener('updatefound', () => {
-
-    const newSW = reg.installing;
-    newSW.addEventListener('statechange', () => {
-
-      // Check service worker state
-      if (newSW.state === 'installed') {
-         
-         }
-       });
-      });
-    });
+  
   window.addEventListener("load", () => {
     // automatically scroll to bottom of chat
     const chat = document.querySelector(".form");
