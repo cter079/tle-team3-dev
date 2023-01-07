@@ -34,6 +34,25 @@
 
       <div class="display">
         <div class="screen2">
+          <div id="popup">
+            <div class="close" onclick="document.getElementById('popup').style.display='none'">X</div>
+            <h3>Hoe installeer ik Burnerphone?</h3>
+            <h5><strong>Android(Chrome)</strong></h5>
+            <p>1. Klik op de 3 puntjes rechtsboven</p>
+            <p>2. Klik op "Toevoegen aan startscherm"</p>
+            <p>3. Klik op "Installeer"</p>
+            <h5><strong>Windows (Edge)</strong></h5>
+            <p>1. Klik op de 3 puntjes rechtsboven</p>
+            <p>2. Ga naar apps</p>
+            <p>3. Klik op "Burnerphone installeren"</p>
+            <h5><strong>IOS (Safari)</strong></h5>
+            <p>1. Klik op de share-knop onderaan het beeldscherm</p>
+            <p>2. Klik op "Voeg toe aan beginscherm"</p>
+
+
+
+
+          </div>
         <div class="notifyWrapper">
             <div class="notify" onclick="window.location.href=`{{route('tutorial')}}`;">
               <div class="header">
@@ -81,7 +100,7 @@
             <div class="app" style="cursor:pointer" onclick="window.location.href=`{{url('/settings')}}`;">Settings</div>
             <div class="app" style="cursor:pointer"onclick="window.location.href=`{{route('tutorial')}}`;">Tutorial</div>
             <div class="app" style="cursor:pointer"onclick="window.location.href=`{{route('picca')}}`;">.Picca</div>
-            <div class="app" style="cursor:pointer"></div>
+            <div class="app" style="cursor:pointer" onclick="document.getElementById('popup').style.display='block'">Install</div>
 
           </div>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
