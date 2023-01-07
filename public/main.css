@@ -1,25 +1,21 @@
-body { 
-
-    margin: 0; 
-
-    padding-top: 80px; 
-
-    background-color: white; 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body {
+    display: grid;
     font-family: "Helvetica", "Arial", sans-serif; 
 
-    display: grid; 
-
-    height: 100%; 
-
-    place-items: center; 
-
-} 
+    height: 100%;
+    place-items: center;
+}
 
  
 
-.device { 
-    margin-left: 5px;
+.device {
+	margin-left: 5px;
 	margin-right: 5px;
 	width: 349px;
 	height: 689px;
@@ -31,282 +27,162 @@ body {
 	background-size: 320px 320px, 320px 320px, 320px 320px, 320px 320px;
 	background-position: left top, right top, left bottom, right bottom;
 	box-shadow: 0 0 1px #000;
-
-} 
-
- 
-
-.screen { 
-
-    position: absolute; 
-
-    border-radius: 30px; 
-
-    top: 4px; 
-
-    right: 4px; 
-
-    bottom: 4px; 
-
-    left: 4px; 
-
-    background-color: #2a2a2a; 
-
-    background-size: 4px 100%, 100% 100%; 
-
-    background-repeat: repeat-x; 
-
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.27); 
-
-    border: 2px #000 solid; 
-
-} 
-
- 
-
-.btn-volume { 
-
-    width: 5px; 
-
-    height: 75px; 
-
-    background-color: #0e0e0e; 
-
-    position: absolute; 
-
-    left: -5px; 
-
-    border-radius: 3px 0 0 3px; 
-
-    background-image: linear-gradient( 
-
-        to bottom, 
-
-        rgba(255, 255, 255, 0.5) 0, 
-
-        rgba(255, 255, 255, 0) 4px, 
-
-        rgba(255, 255, 255, 0) 71px, 
-
-        rgba(255, 255, 255, 0.3) 100% 
-
-    ); 
-
-    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15), 
-
-    inset 0 0 1px rgba(0, 0, 0, 0.5); 
-
-    cursor: pointer; 
-
-} 
-
- 
-
-.btn-volume-up { 
-
-    top: 101px; 
-
-} 
-
- 
-
-.btn-volume-down { 
-
-    top: 180px; 
-
-} 
-
- 
-
-.btn-power { 
-
-    width: 4px; 
-
-    height: 68px; 
-
-    background: #000; 
-
-    position: absolute; 
-
-    right: -4px; 
-
-    top: 180px; 
-
-    border-radius: 0 3px 3px 0; 
-
-    background-image: linear-gradient( 
-
-        to bottom, 
-
-        rgba(255, 255, 255, 0.5) 0, 
-
-        rgba(255, 255, 255, 0) 4px, 
-
-        rgba(255, 255, 255, 0) 64px, 
-
-        rgba(255, 255, 255, 0.3) 100% 
-
-    ); 
-
-    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.2); 
-
-} 
-
- 
-
-.btn-power-act { 
-
-    position: absolute; 
-
-    height: 100%; 
-
-    left: -1px; 
-
-    right: -1px; 
-
-    top: 0; 
-
-    cursor: pointer; 
-
-} 
-
- 
-
-.header { 
-
-    top: 0; 
-
-    width: 100%; 
-
-    height: 55px; 
-
-    position: relative; 
-
-} 
-
- 
-
-.detector { 
-
-    position: absolute; 
-
-    height: 11px; 
-
-    background: #0a0a0a; 
-
-    left: 50%; 
-
-    top: 19px; 
-
-    width: 19px; 
-
-    margin-left: -10px; 
-
-    border-radius: 10px; 
-
-} 
-
- 
-
-.camera { 
-
-    position: absolute; 
-
-    height: 9px; 
-
-    left: 50%; 
-
-    top: 20px; 
-
-    margin-left: 20px; 
-
-    width: 9px; 
-
-    border-radius: 10px; 
-
-    background-image: linear-gradient(135deg, black 1px, #787679); 
-
-    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 0 3px #0a0a0a; 
-
-} 
-
- 
-
-.camera:before { 
-
-    content: ""; 
-
-    display: block; 
-
-    position: absolute; 
-
-    left: 3px; 
-
-    top: 3px; 
-
-    width: 4px; 
-
-    height: 3px; 
-
-    background: #32323e; 
-
-    border-radius: 100%; 
-
-    transform: rotate(-45deg); 
-
-} 
-
- 
-
-.camera:after { 
-
-    content: ""; 
-
-    display: block; 
-
-    width: 3px; 
-
-    height: 3px; 
-
-    left: 3px; 
-
-    top: 3px; 
-
-    position: absolute; 
-
-    border-radius: 3px; 
-
-    background-image: radial-gradient(50% 50%, #7c7f92, transparent); 
-
-} 
-
- 
-
-.display { 
-
-    width: 320px; 
-
-    height: 568px; 
-
-    position: relative; 
-
-    left: 15px; 
-
-    border-radius: 2px; 
-
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.8), inset 0 -1px rgba(255,255,255, .2); 
-
-} 
-
- 
-
-.footer { 
-
-    position: relative; 
-
-    height: 66px; 
-
-} 
+  }
+  
+  .screen {
+	position: absolute;
+	border-radius: 30px;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background-size: 4px 100%, 100% 100%;
+	background-repeat: repeat-x;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.27);
+	border: 2px #000 solid;
+  }
+  
+  .btn-volume {
+	width: 5px;
+	height: 75px;
+	background-color: #0e0e0e;
+	position: absolute;
+	left: -5px;
+	border-radius: 3px 0 0 3px;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 71px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15),
+	  inset 0 0 1px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+  }
+  
+  .btn-volume-up {
+	top: 101px;
+  }
+  
+  .btn-volume-down {
+	top: 180px;
+  }
+  
+  .btn-power {
+	width: 4px;
+	height: 68px;
+	background: #000;
+	position: absolute;
+	right: -4px;
+	top: 180px;
+	border-radius: 0 3px 3px 0;
+	background-image: linear-gradient(
+	  to bottom,
+	  rgba(255, 255, 255, 0.5) 0,
+	  rgba(255, 255, 255, 0) 4px,
+	  rgba(255, 255, 255, 0) 64px,
+	  rgba(255, 255, 255, 0.3) 100%
+	);
+	box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-power-act {
+	position: absolute;
+	height: 100%;
+	left: -1px;
+	right: -1px;
+	top: 0;
+	cursor: pointer;
+  }
+  
+  .header {
+	top: 0;
+	width: 100%;
+	height: 55px;
+	position: relative;
+  }
+  
+  .detector {
+	position: absolute;
+	height: 11px;
+	background: #0a0a0a;
+	left: 50%;
+	top: 19px;
+	width: 19px;
+	margin-left: -10px;
+	border-radius: 10px;
+  }
+  
+  .camera {
+	position: absolute;
+	height: 9px;
+	left: 50%;
+	top: 20px;
+	margin-left: 20px;
+	width: 9px;
+	border-radius: 10px;
+	background-image: linear-gradient(135deg, black 1px, #787679);
+	box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 0 3px #0a0a0a;
+  }
+  
+  .camera:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 4px;
+	height: 3px;
+	background: #32323e;
+	border-radius: 100%;
+	transform: rotate(-45deg);
+  }
+  
+  .camera:after {
+	content: "";
+	display: block;
+	width: 3px;
+	height: 3px;
+	left: 3px;
+	top: 3px;
+	position: absolute;
+	border-radius: 3px;
+	background-image: radial-gradient(50% 50%, #7c7f92, transparent);
+  }
+  
+  .display {
+	width: 320px;
+	height: 568px;
+	background: #000;
+	background-size: auto 100%;
+	position: relative;
+	left: 15px;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.8), inset 0 -1px rgba(255,255,255, .2);
+	background-color: rgb(46, 46, 46);
+  }
+  
+  .footer {
+	position: relative;
+	height: 66px;
+  }
+  
+  
+  .btn-home {
+	height: 50px;
+	width: 50px;
+	left: 50%;
+    transform: translate(-50%, 0);
+	top: 8px;
+	position: absolute;
+	border-radius: 50%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d,
+	  inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d;
+  }
+  
+
+  
 .hide{
     opacity: 0;
     height: 0 !important;
@@ -341,20 +217,7 @@ height: auto;
 
  
 
-.btn-home { 
 
-    height: 50px;
-	width: 50px;
-	left: 50%;
-    transform: translate(-50%, 0);
-	top: 8px;
-	position: absolute;
-	border-radius: 50%;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 2px 0 0 #5d5d5d,
-	  inset -2px 0 0 #5d5d5d, inset 0 -2px 0 #5d5d5d;
-} 
-
- 
 
 
 
@@ -395,7 +258,7 @@ nav {
  
 
 .bank-btn{ 
-
+   
     background-color: #ffa600; 
 
     width: 55px; 
@@ -422,7 +285,6 @@ nav {
 
     height: 74px; 
 
-    margin-left: -7px; 
 
     position: center; 
 

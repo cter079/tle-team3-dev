@@ -50,24 +50,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #ccc;
 }
-.phone{
-	position: relative;
-  width: 100%;
-}
-
-.appy-button{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	background-color: Transparent;
-}
-.gAppy{
-	border-radius: 40px;
 
 
-}
+
 .home-button{
 	position: absolute;
 	top: 97%;
