@@ -154,7 +154,7 @@
 
 						</div>
 					</div>
-					<div class="mySlides" style="background-color:white;">
+					<div class="mySlides" style="background-color:white; height:465px;">
 						<div class="form">
 							<p id="error">notificaties worden hier ingeladen.</p>
 							@foreach($notifications as $notification)
