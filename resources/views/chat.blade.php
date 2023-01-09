@@ -277,7 +277,15 @@ self.addEventListener('install', function(event) {
           localStorage.setItem("Keynai 3", 'false');
 
         }
+        if (body["replay"][0] == "Ja dat gaan je vrienden heel leuk vinden") {
+          localStorage.setItem("4", "ja");
+          localStorage.setItem("Bilal 3", 'false');
 
+        }
+        if (body["replay"][0] == "S goed thx broer") {
+          localStorage.setItem("3", "ja");
+          localStorage.setItem("Anoniem 3", 'false');
+        }
 
         setTimeout(function() {
           document.querySelector(".status").textContent = "typing";
