@@ -65,7 +65,7 @@
               <h2 style="color:white;">{{$chatDetails->name}}</h2>
             </div>
             <div class="chat-profile-name" style="width:100%; text-align:center;">
-              <h3 style="color:dimgray;">+31 6 12345678</h2>
+              <h3 style="color:dimgray;">+31 6 <script>document.write(Math.floor(Math.random()*10000000))</script></h2>
             </div>
             <div class="icon-row" style="position:relative; left:74%;top:3%; 	transform: translate(-50%, -50%); display:flex;">
               <div class="icon" style="padding-right:15px; padding-left:15px;">
