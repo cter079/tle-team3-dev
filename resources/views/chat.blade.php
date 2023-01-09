@@ -279,7 +279,9 @@ self.addEventListener('install', function(event) {
         }
         if (body["replay"][0] == "Ja dat gaan je vrienden heel leuk vinden") {
           localStorage.setItem("4", "ja");
-          localStorage.setItem("Bilal 3", 'false');
+          localStorage.setItem("Bilal(nieuw) 3", 'false');
+          localStorage.setItem("1", "ja");
+
 
         }
         if (body["replay"][0] == "S goed thx broer") {

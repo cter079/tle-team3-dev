@@ -44,6 +44,7 @@ class AppController extends Controller
     }
     public function chatView($id)
     {
+
         $chatName = App::where('id', $id)->get();
         $chats = Messages::where([
             ['account_id', '=', Auth::id()],
@@ -101,6 +102,14 @@ if($message == "Oke k kom zo"){
             $notification->account_id = $account_id;
             $notification->save();
             $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
+}
+if($message == "Oke k kom zo"){
+
+    $notification = new Notifications();
+            $notification->message = "Je hebt een nieuwe mattie in je contactenlijst";
+            $notification->account_id = $account_id;
+            $notification->save();
+            $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
             $data2 = Query::select("*")->where([['query', '=',$message], ['chat_id', 2]])->get();
 
 
@@ -122,7 +131,6 @@ if($message == "Ewa ja ik stuur het nu voor je"){
             $notification->save();
             $notification = Notifications::select('message')->where('account_id', Auth::id())->latest()->first();
 }
-        
         // else{
         //     $notification = new Notifications();
 
@@ -136,6 +144,7 @@ if($message == "Ewa ja ik stuur het nu voor je"){
     
 
 
+        $this->storeMessage($message, $chat_id, $account_id, $data, $name, $replay);
 
         $queries = Responses::select("response")
             ->where('query_id', $id)->get();
@@ -171,7 +180,22 @@ for ($i = 0; $i < count($data); $i++) {
 }
        
     }
-    
+    public function storeMessage2($chatid, $account_id, $data2, $name2, $replay2)
+    {
+       
+for ($i = 0; $i < count($data2); $i++) {
+
+        $chatReceived = new Messages();
+
+        $chatReceived->name = $name2;
+        $chatReceived->account_id = $account_id;
+        $chatReceived->chat_id = $chatid;
+        $chatReceived->direction = "received";
+        $chatReceived->messages = $data2[$i]["response"];
+        $chatReceived->save();
+}
+       
+    }
 
     public function reset()
     {
