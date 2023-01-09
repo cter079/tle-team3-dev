@@ -86,7 +86,7 @@
 						<button onclick="plusDivs(+1)" style="font-weight: bold;">Notificaties</button>
 					</div>
 					<div class="mySlides" style="background-color:white; height:465px;">
-						<div class="form" id="chats" style="max-height: 465px; padding:0px; padding-top:10px;">
+						<div class="form" id="chats" style="max-height: 465px; padding:0px; padding-top:10px; display:flex; justify-content:center;">
 
 							@foreach($chats as $chat)
 							@if($chat->id == 2)
