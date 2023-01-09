@@ -287,6 +287,8 @@ self.addEventListener('install', function(event) {
         if (body["replay"][0] == "S goed thx broer") {
           localStorage.setItem("3", "ja");
           localStorage.setItem("Anoniem 3", 'false');
+          localStorage.setItem("Bilal 3", 'true');
+
         }
 
         setTimeout(function() {
