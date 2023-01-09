@@ -34,4 +34,8 @@ class TutorialController extends Controller
         $chatName = App::where('id', $id)->get();
         return view('chatinfo', ['chats' => $chatName]);
     }
+    public function chatProfile()
+    {
+        return view('chatprofile');
+    }
 }
