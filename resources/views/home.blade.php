@@ -22,8 +22,8 @@
       <div class="screen"></div>
       <div class="btn-volume btn-volume-up"></div>
       <div class="btn-volume btn-volume-down"></div>
-      <div class="btn-power"onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit(); window.open('','_self').close()">
+      <div class="btn-power"onclick="event.preventDefault();localStorage.removeItem('loggedIn');
+                                                     document.getElementById('logout-form').submit(); window.open('','_self').close();">
         <div class="btn-power-act"></div>
       </div>
 
@@ -89,7 +89,7 @@
             <div class="app" style="cursor:pointer; text-align:center; " onclick="window.location.href=`{{url('/bankoe')}}`;">Bankoe</div>
             <div class="app" style="cursor:pointer;text-align:center;" onclick="window.location.href=`{{route('gappie')}}`;">Gappie</div>
             <div class="app" style="cursor:pointer;text-align:center;" onclick="window.location.href=`{{url('/wiki')}}`;">Wikitext</div>
-            <div class="app" style="cursor:pointer;text-align:center;" onclick="event.preventDefault();
+            <div class="app" style="cursor:pointer;text-align:center;" onclick="event.preventDefault();localStorage.removeItem('loggedIn');
                                                      document.getElementById('logout-form').submit(); window.open('','_self').close()
 
 ">Loguit</div>
@@ -146,9 +146,11 @@
     setTimeout(showTime, 1000);
   }
   const firstTime = localStorage.getItem("first_time");
-if(!firstTime) {
-    localStorage.setItem("first_time","1");
+  const loggedn = localStorage.getItem("logged_in");
 
+if(!firstTime) {
+  localStorage.setItem("first_time","1");
+ 
   setTimeout(function() {
             document.getElementById('mySound3').play();
 
@@ -158,10 +160,14 @@ if(!firstTime) {
             setTimeout(function() {
               document.querySelector(".notify").classList.remove("active");
               document.querySelector("#notifyType").textContent = '';
+
             }, 10000);
           }, 2000);
         }
+        
         else{
+          if(!loggedn) {
+    localStorage.setItem("logged_in","1");
           setTimeout(function() {
             document.getElementById('mySound3').play();
 
@@ -173,6 +179,7 @@ if(!firstTime) {
               document.querySelector("#notifyType").textContent = '';
             }, 3000);
           }, 2000);
+        }
         }
   showTime();
 </script>

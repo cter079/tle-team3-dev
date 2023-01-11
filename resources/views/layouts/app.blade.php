@@ -63,7 +63,7 @@
                <div class="dropdown-menu" aria-labelledby="dropdown03">
 
                                     <a class="dropdown-item" style="color:black" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                       onclick="event.preventDefault();localStorage.removeItem('loggedIn');
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
